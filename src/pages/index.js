@@ -28,7 +28,6 @@ const Home = () => {
       </div>
       </Fade>
       <div className="flex items-center justify-center mt-24 sm:mt-0 sm:absolute sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 z-30"><button onClick={handleClickScroll}><img src="/images/search-group.svg" alt="search icon" className="animate-bounce" /></button></div>
-
      </div>
 
      <div id="section2" className="flex items-center justify-center md2:min-h-screen pt-[100px] mt-[20px] md2:pt-0 md2:mt-0">
@@ -100,7 +99,7 @@ const Home = () => {
       
       <div className="relative text-center z-30 mt-[150px]">
        <div className="text-[38px] sm2:text-[42px] italic mb-4">Don’t chase jobs, attract them!</div>
-       <div className="font-[500]"><span className="text-main font-semibold">Talk to Unibot</span> to clear all your job-search queries and follow our 8-week framework to<br className="hidden md2:flex"/> upskill your profile that impress recruiters. </div>
+       <div className="font-[500]"><button onClick={handleClickScroll} className="text-main font-semibold">Talk to Unibot</button> to clear all your job-search queries and follow our 8-week framework to<br className="hidden md2:flex"/> upskill your profile that impress recruiters. </div>
       </div>
       </Fade>
 

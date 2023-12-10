@@ -6,7 +6,6 @@ const Uniprep = () => {
 
     const [menu, setMenu] = useState(false);
     const [tab, setTab] = useState("My Plan Progress");
-    const [moreSkills, setMoreSkills] = useState(false);
 
   return (
     <div className="bg-[#F5F5F5] text-main-dark overflow-hidden">
@@ -36,14 +35,11 @@ const Uniprep = () => {
           <div className="bg-[#F4F4F4] text-[14px] text-white font-semibold leading-none rounded-full mt-4 px-1.5 py-1">
             <div style={{ width: '35%' }} className="customBG rounded-full p-1">35%</div>
           </div>
-          <div className="flex items-center justify-center gap-y-1 flex-wrap mb-3 mt-7">
-            <button className="bg-[#F8F8F8] text-[#8C8C8C] border border-[#8C8C8C] text-[14px] rounded-full px-3 py-1">Data Science</button>
-            <button className="bg-[#F8F8F8] text-[#8C8C8C] border border-[#8C8C8C] text-[14px] rounded-full px-3 py-1">Healthcare</button>
-            <button className="bg-[#F8F8F8] text-[#8C8C8C] border border-[#8C8C8C] text-[14px] rounded-full px-3 py-1">Business Development</button>
-            <button className="bg-[#F8F8F8] text-[#8C8C8C] border border-[#8C8C8C] text-[14px] rounded-full px-3 py-1">Web 3</button>
-            <button className={`bg-[#F8F8F8] text-[#8C8C8C] border border-[#8C8C8C] text-[14px] rounded-full px-3 py-1 ${moreSkills === false ? "hidden" : "inline"}`}>Artificial Intelligence</button>
+          <div className="flex items-center justify-center gap-y-0.5 flex-col mb-3 mt-7">
+            <div className="bg-[#F8F8F8] text-[#8C8C8C] border border-[#8C8C8C] text-[14px] rounded-full px-3 py-1">Data Science</div>
+            <div className="bg-[#F8F8F8] text-[#8C8C8C] border border-[#8C8C8C] text-[14px] rounded-full px-3 py-1">Business Development</div>
+            <div className="bg-[#F8F8F8] text-[#8C8C8C] border border-[#8C8C8C] text-[14px] rounded-full px-3 py-1">Healthcare</div>
           </div>
-          <button onClick={()=> {setMoreSkills(true)}} className={`text-[#8C8C8C] text-[14px] underline mt-3 ${moreSkills === true ? "hidden" : "inline"}`}>+4 more skills</button>
         </div>
 
         <div className="customShadow2 bg-white rounded-2xl px-4 py-5 flex flex-col flex-1">
