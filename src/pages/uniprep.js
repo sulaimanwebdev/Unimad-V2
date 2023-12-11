@@ -6,6 +6,7 @@ const Uniprep = () => {
 
     const [menu, setMenu] = useState(false);
     const [tab, setTab] = useState("My Plan Progress");
+    const [week, setWeek] = useState("Week 4");
 
   return (
     <div className="bg-[#F5F5F5] text-main-dark overflow-hidden">
@@ -59,10 +60,10 @@ const Uniprep = () => {
         <>
          <div className="customScroll overflow-x-auto py-2">
         <div className="flex flex-nowrap items-center gap-5 whitespace-nowrap min-w-full max-w-[1px]">
-         <button className="relative text-[15px] bg-white text-main-dark transition hover:bg-main-dark hover:text-white border-2 border-main-dark font-semibold rounded-full px-5 py-1.5">Week 1 <svg width="18" height="18" className="absolute -top-1 -right-1" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="8.5" r="8.5" fill="#299935"/><rect x="3" y="9.36914" width="2.02865" height="5.07164" transform="rotate(-46.6027 3 9.36914)" fill="white"/><rect x="12.1797" y="4.0896" width="2.02865" height="10.1433" transform="rotate(43.3973 12.1797 4.0896)" fill="white"/></svg></button>
-         <button className="relative text-[15px] bg-white text-main-dark transition hover:bg-main-dark hover:text-white border-2 border-main-dark font-semibold rounded-full px-5 py-1.5">Week 2 <svg width="18" height="18" className="absolute -top-1 -right-1" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="8.5" r="8.5" fill="#299935"/><rect x="3" y="9.36914" width="2.02865" height="5.07164" transform="rotate(-46.6027 3 9.36914)" fill="white"/><rect x="12.1797" y="4.0896" width="2.02865" height="10.1433" transform="rotate(43.3973 12.1797 4.0896)" fill="white"/></svg></button>
-         <button className="relative text-[15px] bg-white text-main-dark transition hover:bg-main-dark hover:text-white border-2 border-main-dark font-semibold rounded-full px-5 py-1.5">Week 3 <svg width="18" height="18" className="absolute -top-1 -right-1" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="8.5" r="8.5" fill="#299935"/><rect x="3" y="9.36914" width="2.02865" height="5.07164" transform="rotate(-46.6027 3 9.36914)" fill="white"/><rect x="12.1797" y="4.0896" width="2.02865" height="10.1433" transform="rotate(43.3973 12.1797 4.0896)" fill="white"/></svg></button>
-         <button className="relative text-[15px] bg-main-dark text-white border-2 border-main-dark font-semibold rounded-full px-5 py-1.5">Week 4</button>
+         <button onClick={()=> {setWeek("Week 1")}} className={`relative text-[15px] transition hover:bg-main-dark hover:text-white border-2 border-main-dark font-semibold rounded-full px-5 py-1.5 ${week === "Week 1" ? "bg-main-dark text-white" : "bg-white text-main-dark"}`}>Week 1 <svg width="18" height="18" className="absolute -top-1 -right-1" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="8.5" r="8.5" fill="#299935"/><rect x="3" y="9.36914" width="2.02865" height="5.07164" transform="rotate(-46.6027 3 9.36914)" fill="white"/><rect x="12.1797" y="4.0896" width="2.02865" height="10.1433" transform="rotate(43.3973 12.1797 4.0896)" fill="white"/></svg></button>
+         <button onClick={()=> {setWeek("Week 2")}} className={`relative text-[15px] transition hover:bg-main-dark hover:text-white border-2 border-main-dark font-semibold rounded-full px-5 py-1.5 ${week === "Week 2" ? "bg-main-dark text-white" : "bg-white text-main-dark"}`}>Week 2 <svg width="18" height="18" className="absolute -top-1 -right-1" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="8.5" r="8.5" fill="#299935"/><rect x="3" y="9.36914" width="2.02865" height="5.07164" transform="rotate(-46.6027 3 9.36914)" fill="white"/><rect x="12.1797" y="4.0896" width="2.02865" height="10.1433" transform="rotate(43.3973 12.1797 4.0896)" fill="white"/></svg></button>
+         <button onClick={()=> {setWeek("Week 3")}} className={`relative text-[15px] transition hover:bg-main-dark hover:text-white border-2 border-main-dark font-semibold rounded-full px-5 py-1.5 ${week === "Week 3" ? "bg-main-dark text-white" : "bg-white text-main-dark"}`}>Week 3 <svg width="18" height="18" className="absolute -top-1 -right-1" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="8.5" r="8.5" fill="#299935"/><rect x="3" y="9.36914" width="2.02865" height="5.07164" transform="rotate(-46.6027 3 9.36914)" fill="white"/><rect x="12.1797" y="4.0896" width="2.02865" height="10.1433" transform="rotate(43.3973 12.1797 4.0896)" fill="white"/></svg></button>
+         <button onClick={()=> {setWeek("Week 4")}} className={`relative text-[15px] transition hover:bg-main-dark hover:text-white border-2 border-main-dark font-semibold rounded-full px-5 py-1.5 ${week === "Week 4" ? "bg-main-dark text-white" : "bg-white text-main-dark"}`}>Week 4</button>
          <button className="relative text-[15px] bg-[#E6E6E6] text-[#B0B0B0] border-2 border-[#E6E6E6] font-semibold rounded-full px-5 py-1.5">Week 5</button>
          <button className="relative text-[15px] bg-[#E6E6E6] text-[#B0B0B0] border-2 border-[#E6E6E6] font-semibold rounded-full px-5 py-1.5">Week 6</button>
          <button className="relative text-[15px] bg-[#E6E6E6] text-[#B0B0B0] border-2 border-[#E6E6E6] font-semibold rounded-full px-5 py-1.5">Week 7</button>
@@ -71,33 +72,56 @@ const Uniprep = () => {
        </div>
 
        <div className="flex gap-5 flex-col mt-10">
-        <Task state="Completed" locked={false} />
-        <Task state="In Progress" locked={false}/>
-        <Task state="In Progress" locked={true}/>
+        {
+         week === "Week 1" ?
+         <>
+          <Task state="Completed" locked={false} />
+          <Task state="In Progress" locked={false}/>
+          <Task state="In Progress" locked={true}/>
+          <Task state="In Progress" locked={true}/>
+         </>
+         :
+         week === "Week 2" ?
+         <>
+          <Task state="Completed" locked={false} />
+          <Task state="In Progress" locked={false}/>
+         </>
+         :
+         week === "Week 3" ?
+         <>
+          <Task state="Completed" locked={false} />
+         </>
+         :
+         week === "Week 4" ?
+         <>
+          <Task state="Completed" locked={false} />
+          <Task state="In Progress" locked={false}/>
+          <Task state="In Progress" locked={true}/>
+         </>
+         :
+         null
+        }
        </div>
         </>
         :
         tab === "Unibot" ?
         <>
-        <div className="grid grid-rows-[20px,1fr] gap-5 h-full">
-          <div className="text-[22px] text-center font-semibold">Unibot🤖</div>
-          <div className="relative bg-white rounded-t-xl order-2 md2:order-none md2:col-start-1">
-      <div className="customScroll relative bg-white h-full min-h-[350px] max-h-[350px] md2:min-h-auto md2:max-h-[calc(100vh-120px)] pb-20 md2:pb-0 rounded-xl overflow-y-auto">
-        <div className="flex flex-col justify-end min-h-full bg-white gap-12">
+        <div className="relative h-full pt-[40px]">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[22px] text-center font-semibold z-30">Unibot🤖</div>
+          <div className="customScroll relative rounded-t-xl max-h-[350px] md2:max-h-[calc(100vh-105px)] overflow-y-auto pr-2">
+      <div className="flex flex-col gap-12 justify-end relative bg-white min-h-[350px] md2:min-h-[calc(100vh-105px)] rounded-xl">
         <div className="left flex"><div className="bg-[#E8EAEE] text-[#595959] px-4 py-3" style={{borderRadius: "20px 20px 20px 0px"}}>Hi Tanya! How can I help you?</div></div>
         <div className="right flex justify-end"><div className="bg-[#EFF7FF] text-main-dark px-4 py-3" style={{borderRadius: "20px 20px 0px 20px"}}>I need to find a job in UK</div></div>
-        </div>
-
-       
-
+ 
       </div>
-      <div className="absolute bottom-0 left-0 w-full bg-white py-2">
+      
+    
+      </div>
+      <div className=" w-full bg-white py-2">
       <div className="customShadow4 flex items-center gap-2 bg-white overflow-hidden rounded-full w-full h-[50px] border border-white focus-within:border-main-dark pl-5">
         <input type="text" placeholder="Ask me anything" className="text-black w-full placeholder:text-[#BFCFE9] border-none outline-none" />
         <button className="pl-3 pr-5"><svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16.0868V10.0868L8 8.08679L0 6.08679V0.086792L19 8.08679L0 16.0868Z" fill="black"/></svg></button>
       </div>
-      </div>
-    
       </div>
         </div>
         </>
