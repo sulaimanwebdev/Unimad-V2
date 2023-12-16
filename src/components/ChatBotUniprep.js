@@ -47,7 +47,10 @@ const ChatBotUniprep = () => {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
     if (chatbotScrollRef.current) {
-      chatbotScrollRef.current.scrollTop = chatbotScrollRef.current.scrollHeight;
+      chatbotScrollRef.current.scrollTo({
+        top: chatbotScrollRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
     }
   }, [botMessages, userMessages]);
 
