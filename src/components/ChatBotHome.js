@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import ReactMarkdown from 'react-markdown';
+import React, { useState, useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
 
 const ChatBotHome = () => {
   const [inputValue, setInputValue] = useState('');
@@ -46,7 +46,7 @@ const ChatBotHome = () => {
 
   return (
     <div className="bg-[#FBFBFB] rounded-t-xl order-2 md2:order-none md2:col-start-1">
-      <div ref={chatbotScrollRef} className="customScroll relative bg-[#FBFBFB] h-[350px] rounded-xl p-5 overflow-y-auto">
+      <div ref={chatbotScrollRef} className="customScroll relative bg-[#FBFBFB] h-[350px] rounded-xl overflow-y-auto p-5">
         <div className="flex flex-col justify-end min-h-[300px] gap-12">
 
         {botMessages.map((message, index) => (

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import ReactMarkdown from 'react-markdown';
+import React, { useState, useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
 
 const ChatBotUniprep = () => {
   const [inputValue, setInputValue] = useState('');
@@ -23,6 +23,12 @@ const ChatBotUniprep = () => {
       const newMessage = inputValue.trim();
       setUserMessages([...userMessages, newMessage]);
       setInputValue('');
+      if (messagesEndRef.current) {
+        messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+      if (chatbotScrollRef.current) {
+        chatbotScrollRef.current.scrollTop = chatbotScrollRef.current.scrollHeight;
+      }
     }
   };
 
@@ -50,7 +56,7 @@ const ChatBotUniprep = () => {
       <div className={`relative flex flex-col pt-[40px] ${textareaHeight > 50 ? "" : "md2:h-[calc(100%-60px)]"}`}>
         <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[22px] text-center font-semibold z-30">Unibot🤖</div>
         <div className="relative flex-1 z-30">
-          <div className="customScroll relative rounded-t-xl max-h-[350px] md2:max-h-[calc(100vh-100px)] overflow-y-auto pr-2">
+          <div ref={chatbotScrollRef} className="customScroll relative rounded-t-xl max-h-[350px] md2:max-h-[calc(100vh-100px)] overflow-y-auto pr-2">
             <div className="flex flex-col gap-12 justify-end relative bg-white h-full min-h-[350px] md2:min-h-[calc(100vh-100px)] rounded-xl pb-3">
               {botMessages.map((message, index) => (
                 <div className="left flex" key={`bot-${index}`}>
