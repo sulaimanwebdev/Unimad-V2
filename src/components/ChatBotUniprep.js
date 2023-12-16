@@ -47,7 +47,7 @@ const ChatBotUniprep = () => {
 
   return (
     <>
-      <div className="relative h-[calc(100%-60px)] flex flex-col pt-[40px]">
+      <div className={`relative flex flex-col pt-[40px] ${textareaHeight > 50 ? "" : "md2:h-[calc(100%-60px)]"}`}>
         <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[22px] text-center font-semibold z-30">Unibot🤖</div>
         <div className="relative flex-1 z-30">
           <div className="customScroll relative rounded-t-xl max-h-[350px] md2:max-h-[calc(100vh-100px)] overflow-y-auto pr-2">
