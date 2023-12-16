@@ -5,6 +5,7 @@ import TestimonialSlider from "../components/TestimonialSlider";
 import Footer from "../components/Footer";
 import Fade from "react-reveal/Fade";
 import { TypeAnimation } from "react-type-animation";
+import ReactMarkdown from "react-markdown";
 
 const Home = () => {
 
@@ -38,6 +39,7 @@ const Home = () => {
     setInputValue(event.target.value);
   };
 
+
   return (
     <div className="overflow-hidden">
      <div className="relative max-w-[1200px] mx-auto min-h-[calc(100vh-150px)] md2:min-h-[calc(100vh-200px)]">
@@ -57,11 +59,49 @@ const Home = () => {
      <div  className="mainCont relative text-main-dark grid grid-cols-1 md2:grid-cols-2 xl:grid-cols-[1.2fr,1fr] gap-12 md2:gap-10 z-30">
      <Fade bottom>
 
+     {/* ChatBot Starts */}
      <div className="bg-[#FBFBFB] rounded-t-xl order-2 md2:order-none md2:col-start-1">
       <div className="customScroll relative bg-[#FBFBFB] h-full max-h-[350px] rounded-xl p-5 overflow-y-auto">
       <div className="flex flex-col justify-end min-h-[300px] gap-12">
-        <div className="left flex"><div className="bg-[#E8EAEE] text-[#595959] px-4 py-3" style={{borderRadius: "20px 20px 20px 0px"}}>Hi Tanya! How can I help you?</div></div>
-        <div className="right flex justify-end"><div className="bg-[#EFF7FF] text-main-dark px-4 py-3" style={{borderRadius: "20px 20px 0px 20px"}}>I need to find a job in UK</div></div>
+        <div className="left flex"><div className="bg-[#E8EAEE] text-[#595959] text-[17px] w-full px-4 py-3" style={{borderRadius: "20px 20px 20px 0px"}}>
+        <ReactMarkdown className="prose">
+{`
+
+## Heading 1
+
+### Heading 2
+
+This is a paragraph of text.
+
+![Placeholder Image](https://via.placeholder.com/150)
+
+[Link Example](https://www.example.com)
+
+**Bold Text**
+
+*Italic Text*
+
+- List item 1
+- List item 2
+- List item 3
+
+> Blockquote example
+
+\`inline code\`
+
+\`\`\`javascript
+// Code block example
+function greet() {
+  return 'Hello!';
+}
+greet();
+\`\`\`
+`}
+
+          </ReactMarkdown>
+        </div>
+        </div>
+        <div className="right flex justify-end"><div className="bg-[#EFF7FF] text-main-dark text-[17px] px-4 py-3" style={{borderRadius: "20px 20px 0px 20px"}}>I need to find a job in UK</div></div>
         </div>
       </div>
       <div className="flex items-end gap-2 bg-white border border-main-dark overflow-hidden rounded-lg min-h-[50px] max-h-[400px] pl-5">
@@ -83,7 +123,7 @@ const Home = () => {
         </button>
       </div>
     </div>
-
+     {/* ChatBot Ends */}
 
       </Fade>
 
