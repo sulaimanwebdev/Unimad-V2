@@ -1,11 +1,10 @@
-"use client"
-import React, { useState, useEffect, useRef } from 'react';
 import Header from "../components/Header";
 import TestimonialSlider from "../components/TestimonialSlider";
 import Footer from "../components/Footer";
 import Fade from "react-reveal/Fade";
 import { TypeAnimation } from "react-type-animation";
-import ReactMarkdown from "react-markdown";
+import ChatBotHome from "@/components/ChatBotHome";
+
 
 const Home = () => {
 
@@ -16,27 +15,6 @@ const Home = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-
-  // chatbot textarea
-  const [inputValue, setInputValue] = useState('');
-  const [textareaHeight, setTextareaHeight] = useState(50); // Initial height
-
-  const textareaRef = useRef(null);
-
-  useEffect(() => {
-    if (textareaRef.current) {
-      const currentHeight = textareaRef.current.scrollHeight;
-      setTextareaHeight(currentHeight > 200 ? 200 : currentHeight);
-    }
-    if(inputValue === ""){
-      setTextareaHeight(50)
-    }
-  }, [inputValue]);
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
   };
 
 
@@ -60,69 +38,7 @@ const Home = () => {
      <Fade bottom>
 
      {/* ChatBot Starts */}
-     <div className="bg-[#FBFBFB] rounded-t-xl order-2 md2:order-none md2:col-start-1">
-      <div className="customScroll relative bg-[#FBFBFB] h-full max-h-[350px] rounded-xl p-5 overflow-y-auto">
-      <div className="flex flex-col justify-end min-h-[300px] gap-12">
-        <div className="left flex"><div className="bg-[#E8EAEE] text-[#595959] text-[17px] w-full px-4 py-3" style={{borderRadius: "20px 20px 20px 0px"}}>
-        <ReactMarkdown className="prose">
-{`
-
-## Heading 1
-
-### Heading 2
-
-This is a paragraph of text.
-
-![Placeholder Image](https://via.placeholder.com/150)
-
-[Link Example](https://www.example.com)
-
-**Bold Text**
-
-*Italic Text*
-
-- List item 1
-- List item 2
-- List item 3
-
-> Blockquote example
-
-\`inline code\`
-
-\`\`\`javascript
-// Code block example
-function greet() {
-  return 'Hello!';
-}
-greet();
-\`\`\`
-`}
-
-          </ReactMarkdown>
-        </div>
-        </div>
-        <div className="right flex justify-end"><div className="bg-[#EFF7FF] text-main-dark text-[17px] px-4 py-3" style={{borderRadius: "20px 20px 0px 20px"}}>I need to find a job in UK</div></div>
-        </div>
-      </div>
-      <div className="flex items-end gap-2 bg-white border border-main-dark overflow-hidden rounded-lg min-h-[50px] max-h-[400px] pl-5">
-      <textarea
-          placeholder="Ask me anything"
-          value={inputValue}
-          onChange={handleInputChange}
-          ref={textareaRef}
-          className="customScroll border-none outline-none resize-none w-full h-full py-3 pr-2"
-          style={{
-            height: `${textareaHeight}px`,
-            overflow: textareaHeight < 200 ? 'hidden' : 'scroll',
-          }}
-        ></textarea>
-        <button className="-translate-y-4 pl-3 pr-5">
-          <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 16.0868V10.0868L8 8.08679L0 6.08679V0.086792L19 8.08679L0 16.0868Z" fill="black"/>
-          </svg>
-        </button>
-      </div>
-    </div>
+      <ChatBotHome/>
      {/* ChatBot Ends */}
 
       </Fade>
