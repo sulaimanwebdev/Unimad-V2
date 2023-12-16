@@ -17,20 +17,20 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-     <div className="relative max-w-[1200px] mx-auto sm:min-h-[calc(100vh-150px)] md2:min-h-[calc(100vh-200px)]">
+     <div className="relative max-w-[1200px] mx-auto min-h-[calc(100vh-150px)] md2:min-h-[calc(100vh-200px)]">
      <Header/>
      <img src="/images/circle1.svg" alt="circle bg" className="absolute -top-[200px] sm2:-top-[300px] -right-[200px] sm2:-right-[350px] sm:-right-[500px]" />
 
      <Fade bottom>
-      <div className="mainCont relative text-main-dark mt-[140px] md:mt-[160px] z-30">
-       <div className="text-[35px] sm3:text-[40px] sm:text-[55px] md:text-[65px] leading-[117%]">Want to land multiple<br className="hidden sm:flex"/> interviews in less than<br className="hidden sm:flex"/> <span className="text-main font-semibold inline-flex whitespace-nowrap">8 weeks</span></div>
-       <button className="mainButton flex items-center gap-3 border border-main-dark rounded-full transition hover:bg-main hover:text-white hover:border-main font-medium text-[19px] w-fit px-5 py-3 mt-10">Yes, I'm in! <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="currentColor"/></svg></button>
+      <div className="mainCont relative text-main-dark mt-[140px] md:mt-[160px] lg2:mt-[200px] z-30">
+       <div className="text-[35px] sm3:text-[40px] sm:text-[55px] md:text-[65px] leading-[117%] lg2:translate-x-[175px] lg2:scale-[1.3]">Want to land multiple<br className="hidden sm:flex"/> interviews in less than<br className="hidden sm:flex"/> <span className="text-main font-semibold inline-flex whitespace-nowrap">8 weeks</span></div>
+       <button className="mainButton flex items-center gap-3 border border-main-dark rounded-full transition hover:bg-main hover:text-white hover:border-main font-medium text-[19px] w-fit px-5 py-3 mt-10 lg2:mt-16 lg2:translate-x-[15px] lg2:scale-[1.1]">Yes, I'm in! <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="currentColor"/></svg></button>
       </div>
       </Fade>
-      <div className="flex items-center justify-center mt-24 sm:mt-0 sm:absolute sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 z-30"><button onClick={handleClickScroll}><img src="/images/search-group.svg" alt="search icon" className="animate-bounce" /></button></div>
+      <div className="flex items-center justify-center mt-24 absolute bottom-0 left-1/2 -translate-x-1/2 z-30"><button onClick={handleClickScroll}><img src="/images/search-group.svg" alt="search icon" className="animate-bounce" /></button></div>
      </div>
 
-     <div id="section2" className="flex items-center justify-center md2:min-h-screen pt-[100px] mt-[20px] md2:pt-0 md2:mt-0">
+     <div id="section2" className="flex items-center justify-center md2:min-h-screen pt-[100px] sm:mt-[20px] md2:pt-0 md2:mt-0">
      <div  className="mainCont relative text-main-dark grid grid-cols-1 md2:grid-cols-2 xl:grid-cols-[1.2fr,1fr] gap-12 md2:gap-10 z-30">
      <Fade bottom>
       <div className="bg-[#FBFBFB] rounded-t-xl order-2 md2:order-none md2:col-start-1">
@@ -143,9 +143,9 @@ const Home = () => {
      <Fade bottom>
      <div className="mainCont">
       <div className="mainCont customBG relative text-white text-center rounded-3xl my-[150px] py-12 z-30">
-       <div className="text-[34px] sm2:text-[45px] font-semibold mb-3">Join the Journey!</div>
-       <div className="max-w-[700px] mx-auto">Nisi quis eleifend quam adipiscing vitae proin sagittis. Duis tristique sollicitudin nibh sit amet. Amet consectetur adipiscing elit pellentesque habitant morbi tristique. Pellentesque diam volutpat commodo sed. Interdum varius sit amet mattis.</div>
-       <button className="bg-white text-main-dark text-center font-medium rounded-full w-fit transition hover:-translate-y-0.5 px-6 py-3 mt-10 mx-auto">Contact Us</button>
+       <div className="text-[34px] sm2:text-[45px] font-semibold mb-3">Step Into the Unimad Circle</div>
+       <div className="max-w-[700px] mx-auto">Reinvent your job search. The goal is to form a community of MSc students who thrive to uplift each other. Questions, thoughts, breakthroughs, or want to celebrate a win? We're all ears. Your voice is what shapes our community.</div>
+       <a href="mailto:grow@unimad.xyz" className="bg-white text-main-dark flex text-center font-medium rounded-full w-fit transition hover:-translate-y-0.5 px-6 py-3 mt-10 mx-auto">Contact Us</a>
       </div>
      </div>
      </Fade>
