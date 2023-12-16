@@ -1,3 +1,5 @@
+"use client"
+import React, { useState, useEffect, useRef } from 'react';
 import Header from "../components/Header";
 import TestimonialSlider from "../components/TestimonialSlider";
 import Footer from "../components/Footer";
@@ -13,6 +15,24 @@ const Home = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+
+  // chatbot textarea
+  const [inputValue, setInputValue] = useState('');
+  const [textareaHeight, setTextareaHeight] = useState(50); // Initial height
+
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    if (textareaRef.current) {
+      const currentHeight = textareaRef.current.scrollHeight;
+      setTextareaHeight(currentHeight > 250 ? 250 : currentHeight);
+    }
+  }, [inputValue]);
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
   };
 
   return (
@@ -33,19 +53,32 @@ const Home = () => {
      <div id="section2" className="flex items-center justify-center md2:min-h-screen pt-[100px] sm:mt-[20px] md2:pt-0 md2:mt-0">
      <div  className="mainCont relative text-main-dark grid grid-cols-1 md2:grid-cols-2 xl:grid-cols-[1.2fr,1fr] gap-12 md2:gap-10 z-30">
      <Fade bottom>
-      <div className="bg-[#FBFBFB] rounded-t-xl order-2 md2:order-none md2:col-start-1">
+
+     <div className="bg-[#FBFBFB] rounded-t-xl order-2 md2:order-none md2:col-start-1">
       <div className="customScroll relative bg-[#FBFBFB] h-full max-h-[350px] rounded-xl p-5 overflow-y-auto">
-        <div className="flex flex-col justify-end min-h-[300px] gap-12">
+      <div className="flex flex-col justify-end min-h-[300px] gap-12">
         <div className="left flex"><div className="bg-[#E8EAEE] text-[#595959] px-4 py-3" style={{borderRadius: "20px 20px 20px 0px"}}>Hi Tanya! How can I help you?</div></div>
         <div className="right flex justify-end"><div className="bg-[#EFF7FF] text-main-dark px-4 py-3" style={{borderRadius: "20px 20px 0px 20px"}}>I need to find a job in UK</div></div>
         </div>
+      </div>
+      <div className="flex items-end gap-2 bg-white border border-main-dark overflow-hidden rounded-lg min-h-[50px] max-h-[400px] pl-5">
+      <textarea
+          placeholder="Ask me anything"
+          value={inputValue}
+          onChange={handleInputChange}
+          ref={textareaRef}
+          className="customScroll border-none outline-none resize-none overflow-y-auto w-full h-full py-3 pr-2"
+          style={{ height: `${textareaHeight}px` }}
+        ></textarea>
+        <button className="-translate-y-4 pl-3 pr-5">
+          <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 16.0868V10.0868L8 8.08679L0 6.08679V0.086792L19 8.08679L0 16.0868Z" fill="black"/>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-      </div>
-      <div className="flex items-center gap-2 bg-white border border-main-dark overflow-hidden rounded-full h-[50px] pl-5">
-        <input type="text" placeholder="Ask me anything" className="w-full border-none outline-none" />
-        <button className="pl-3 pr-5"><svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16.0868V10.0868L8 8.08679L0 6.08679V0.086792L19 8.08679L0 16.0868Z" fill="black"/></svg></button>
-      </div>
-      </div>
+
       </Fade>
 
       <Fade bottom>
