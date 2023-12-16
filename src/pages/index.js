@@ -29,6 +29,9 @@ const Home = () => {
       const currentHeight = textareaRef.current.scrollHeight;
       setTextareaHeight(currentHeight > 200 ? 200 : currentHeight);
     }
+    if(inputValue === ""){
+      setTextareaHeight(50)
+    }
   }, [inputValue]);
 
   const handleInputChange = (event) => {
