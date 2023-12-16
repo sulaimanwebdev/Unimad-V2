@@ -27,7 +27,7 @@ const Home = () => {
   useEffect(() => {
     if (textareaRef.current) {
       const currentHeight = textareaRef.current.scrollHeight;
-      setTextareaHeight(currentHeight > 250 ? 250 : currentHeight);
+      setTextareaHeight(currentHeight > 200 ? 200 : currentHeight);
     }
   }, [inputValue]);
 
@@ -67,8 +67,11 @@ const Home = () => {
           value={inputValue}
           onChange={handleInputChange}
           ref={textareaRef}
-          className="customScroll border-none outline-none resize-none overflow-y-auto w-full h-full py-3 pr-2"
-          style={{ height: `${textareaHeight}px` }}
+          className="customScroll border-none outline-none resize-none w-full h-full py-3 pr-2"
+          style={{
+            height: `${textareaHeight}px`,
+            overflow: textareaHeight < 200 ? 'hidden' : 'scroll',
+          }}
         ></textarea>
         <button className="-translate-y-4 pl-3 pr-5">
           <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
