@@ -49,8 +49,8 @@ const ChatBotHome = () => {
   }, [botMessages, userMessages]);
 
   return (
-    <div className="bg-[#FBFBFB] rounded-t-xl order-2 md2:order-none md2:col-start-1">
-      <div ref={chatbotScrollRef} className="customScroll relative bg-[#FBFBFB] h-[350px] rounded-xl overflow-y-auto p-5">
+    <div className="bg-white rounded-xl order-2 md2:order-none md2:col-start-1 p-2">
+      <div ref={chatbotScrollRef} className="customScroll relative bg-[#FBFBFB] h-[350px] rounded-xl overflow-y-auto px-3 py-5">
         <div className="flex flex-col justify-end min-h-[300px] gap-12">
 
         {botMessages.map((message, index) => (

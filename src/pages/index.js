@@ -25,7 +25,8 @@ const Home = () => {
      </div>
 
      <div id="chatbot" className="flex items-center justify-center md2:min-h-screen pt-[100px] sm:mt-[20px] md2:pt0 md2:mt-0">
-     <div  className="mainCont relative text-main-dark grid grid-cols-1 md2:grid-cols-2 xl:grid-cols-[1.2fr,1fr] gap-12 md2:gap-10 z-30">
+     <div className="mainCont relative">
+     <div className="relative text-main-dark grid grid-cols-1 md2:grid-cols-2 xl:grid-cols-[1.2fr,1fr] gap-12 md2:gap-10 z-30">
      <Fade bottom>
 
      {/* ChatBot Starts */}
@@ -58,17 +59,21 @@ const Home = () => {
     ”
         </div>
         <div className="flex items-center gap-x-5 gap-y-3 flex-wrap mt-8">
-        <button className="mainButton flex px-4 py-3 font-[600] border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">How do I make a resume?</button>
-        <button className="mainButton flex px-4 py-3 font-[600] border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">Best Job hunt websites?</button>
-        <button className="mainButton flex px-4 py-3 font-[600] border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">Top University for Data science</button>
+        <button className="mainButton flex px-4 py-3 font-[600] bg-white border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">How do I make a resume?</button>
+        <button className="mainButton flex px-4 py-3 font-[600] bg-white border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">Best Job hunt websites?</button>
+        <button className="mainButton flex px-4 py-3 font-[600] bg-white border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">Top University for Data science</button>
         </div>
       </div>
       </Fade>
      </div>
+     <img src="/images/circle3.svg" alt="circle bg" className="hidden sm2:flex absolute bottom-[200px] md:bottom-[100px] md2:-bottom-[480px] -left-[200px] w-[1200px]" />
+
+     </div>
+
      </div>
 
 
-     <div className="mainCont relative text-main-dark">
+     <div className="mainCont relative text-main-dark z-30">
       <div className="relative text-center z-30 mt-[150px] md2:mt-[200px]">
       <Fade bottom>
        <div className="text-[42px] leading-[117%] mb-6"><span className="text-main font-semibold">8 Steps</span> to land your Dream Job</div>
