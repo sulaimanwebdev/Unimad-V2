@@ -5,13 +5,9 @@ import Fade from "react-reveal/Fade";
 import { TypeAnimation } from "react-type-animation";
 import ChatBotHome from "@/components/ChatBotHome";
 
-
 const Home = () => {
 
   const text = "MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. ";
-  
-
-
 
   return (
     <div className="overflow-hidden">

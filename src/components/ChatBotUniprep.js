@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 
 const ChatBotUniprep = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setisLoading] = useState(true);
   const [textareaHeight, setTextareaHeight] = useState(50);
   const [botMessages, setBotMessages] = useState([
     'Hi Tanya! How can I help you?',
@@ -63,15 +64,35 @@ const ChatBotUniprep = () => {
             <div className="flex flex-col gap-12 justify-end relative bg-white h-full min-h-[350px] md2:min-h-[calc(100vh-100px)] rounded-xl pb-3">
               {botMessages.map((message, index) => (
                 <div className="left flex" key={`bot-${index}`}>
-                  <div className="bg-[#E8EAEE] text-[#595959] px-4 py-3" style={{ borderRadius: "20px 20px 20px 0px" }}>
+                  <div className="bg-[#E8EAEE] text-[#595959] text-[17px] px-4 py-3" style={{ borderRadius: "20px 20px 20px 0px" }}>
                     <ReactMarkdown className="prose">{message}</ReactMarkdown>
                     <div ref={messagesEndRef}></div>
                   </div>
                 </div>
               ))}
+
+
+              {/* loading animation starts */}
+              {isLoading && (
+               <div className="left flex">
+                <div className="bg-[#E8EAEE] text-[#595959] text-[17px] w-fit px-4 py-3" style={{ borderRadius: '20px 20px 20px 0px' }}>
+                  <div className="flex items-center gap-2 text-sm">
+                  <div className="lds-dots relative flex items-center gap-2">
+                    <div className="bg-main w-2.5 h-2.5 rounded-full"></div>
+                    <div className="bg-main w-2.5 h-2.5 rounded-full"></div>
+                    <div className="bg-main w-2.5 h-2.5 rounded-full"></div> {/* Third dot */}
+                  </div>
+                  <p>AI is thinking</p>
+                </div>
+                </div>
+              </div>
+              )}
+             {/* loading animation ends */}
+
+
               {userMessages.map((message, index) => (
                 <div className="right flex justify-end" key={`user-${index}`}>
-                  <div className="bg-[#EFF7FF] text-main-dark px-4 py-3" style={{ borderRadius: "20px 20px 0px 20px" }}>
+                  <div className="bg-[#EFF7FF] text-main-dark text-[17px] px-4 py-3 px-4 py-3" style={{ borderRadius: "20px 20px 0px 20px" }}>
                     <ReactMarkdown className="prose">{message}</ReactMarkdown>
                   </div>
                 </div>

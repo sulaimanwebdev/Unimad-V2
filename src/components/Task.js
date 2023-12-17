@@ -31,23 +31,44 @@ const Task = (props) => {
             :
             <div className="absolute top-3 right-5"><svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 21C1.0875 21 0.734375 20.8531 0.440625 20.5594C0.146875 20.2656 0 19.9125 0 19.5V8.65C0 8.2375 0.146875 7.88438 0.440625 7.59063C0.734375 7.29688 1.0875 7.15 1.5 7.15H3.25V4.75C3.25 3.43583 3.71338 2.31563 4.64015 1.38938C5.56692 0.463125 6.68775 0 8.00265 0C9.31755 0 10.4375 0.463125 11.3625 1.38938C12.2875 2.31563 12.75 3.43583 12.75 4.75V7.15H14.5C14.9125 7.15 15.2656 7.29688 15.5594 7.59063C15.8531 7.88438 16 8.2375 16 8.65V19.5C16 19.9125 15.8531 20.2656 15.5594 20.5594C15.2656 20.8531 14.9125 21 14.5 21H1.5ZM8.0042 16C8.53473 16 8.9875 15.8164 9.3625 15.4492C9.7375 15.082 9.925 14.6406 9.925 14.125C9.925 13.625 9.7361 13.1708 9.3583 12.7625C8.9805 12.3542 8.52633 12.15 7.9958 12.15C7.46527 12.15 7.0125 12.3542 6.6375 12.7625C6.2625 13.1708 6.075 13.6292 6.075 14.1375C6.075 14.6458 6.2639 15.0833 6.6417 15.45C7.0195 15.8167 7.47367 16 8.0042 16ZM4.75 7.15H11.25V4.75C11.25 3.84722 10.9343 3.07986 10.3029 2.44792C9.67157 1.81597 8.9049 1.5 8.00295 1.5C7.10098 1.5 6.33333 1.81597 5.7 2.44792C5.06667 3.07986 4.75 3.84722 4.75 4.75V7.15Z" fill="#696969"/></svg></div>
           }
-          <div className="flex items-center gap-2">
-            <div className={`text-[17px] text-[#696969] font-semibold ${props.locked === true ? "blur-[4px]" : ""}`}>Task 1</div>
+          <div className="flex items-center gap-2 mb-5">
+            <div className={`text-[17px] text-black font-semibold ${props.locked === true ? "blur-[4px]" : ""}`}>Task 1</div>
             <div className={`bg-opacity-20 text-[14px] font-semibold leading-none rounded-full px-2.5 py-1.5 ${props.state === "Completed" ? "bg-[#299935] text-[#299935]" : "bg-[#FFAC33] text-[#FFAC33]"} ${props.locked === true ? "blur-[4px]" : ""}`}>{props.state === "Completed" ? "Completed" : "In Progress"}</div>
           </div>
-          <div className={`text-[20px] font-semibold mb-3 mt-5 ${props.locked === true ? "blur-[4px]" : ""}`}>Craft a Resume</div>
           <div className={`customScroll h-full max-h-[500px] -ml-2 pl-2 pr-2 ${task === true ? "overflow-y-auto" : "overflow-hidden"}`}>
-            <div className={`text-[#8C8C8C] text-[15px] max-w-[800px] ${props.locked === true ? "blur-[4px]" : ""}`}>Nisi quis eleifend quam adipiscing vitae proin sagittis. Duis tristique sollicitudin nibh sit amet. Amet consectetur adipiscing elit pellentesque habitant morbi tristique. Pellentesque diam volutpat commodo sed.<br/><br/> Maecenas pharetra convallis posuere morbi leo urna molestie. Nisl purus in mollis nunc. Feugiat nibh sed pulvinar proin gravida. Dolor magna eget est lorem ipsum dolor sit. Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Volutpat lacus laoreet non curabitur gravida arcu ac tortor. Ut venenatis tellus in metus vulputate. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Ridiculus mus mauris vitae ultricies leo. Diam vulputate ut pharetra sit amet aliquam.<br/><br/> Maecenas pharetra convallis posuere morbi leo urna molestie. Nisl purus in mollis nunc. Feugiat nibh sed pulvinar proin gravida. Dolor magna eget est lorem ipsum dolor sit. Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Volutpat lacus laoreet non curabitur gravida arcu ac tortor. Ut venenatis tellus in metus vulputate. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Ridiculus mus mauris vitae ultricies leo. Diam vulputate ut pharetra sit amet aliquam.</div>
+            <div className={`text-black text-[15px] max-w-[800px] ${props.locked === true ? "blur-[4px]" : ""}`}>
+            <div className="text-[20px] font-semibold mb-3">Craft a Resume</div>
+              
+            <div className="mb-5"><b>Task Overview:</b> Mark out 2-3 roles that align with your goals and strengths. Select interrelated roles as similarity in roles will ensure a more focused and efficient job preparation process.</div>
+            
+            <div className="mb-5"><b>Act 1- The Inner Desire</b></div>
+            <div className="mb-5">All mad stories begin with understanding what you want and why you want it. Ask yourself which kind of role you want to pursue and also why do you want to pursue it? Reflect on your academic strengths, projects you've enjoyed, subjects that excite you, and tosks you excel at. Note down all your key skillsets, & competencies. It's essential to understand what hypes you up, as this intrinsic motivation will be key to landing interviews.</div>
+            
+            <div className="mb-5"><b>Act 2-Your Destined Roles</b></div>
+            <div className="mb-5">Now uncover the roles that resonate with your core. Utilize resources like Linkedin, Glassdoor, and Indeed to explore job descriptions. Pay attention to roles that frequently appear and those that match your skill set. Attend career fairs and networking events at your university to leam about different positions firsthand.</div>
+           
+            <div className="mb-5"><b>Act 3-Your Professional Triad</b></div>
+            <div className="mb-5">From a pyramid of possibilities, emerge your chosen 3 roles that align closely with your strengths and interests. These roles should represent a mix of your passions, skills, market demand, and personals</div>
+
+            </div>
             <div className={`${props.locked === true ? "blur-[4px]" : ""} mt-5`}>
               <div className="bg-main bg-opacity-10 rounded-lg border-[0.25px] border-[#8C8C8C] p-2">
                 <div className="flex items-center justify-between gap-2 mb-5">
                   <div className="text-[15px] font-[500]">Prompt</div>
-                  <button onClick={handleCopyClick} className="bg-white rounded-lg flex items-center gap-2 text-[14px] px-4 py-2"><svg xmlns="http://www.w3.org/2000/svg" className={copyTextState === false ? "": "hidden"} width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" className={copyTextState === true ? "": "hidden"} width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16"><path fillRule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg> {copyTextState === false ? "Copy" : "Copied"}</button>
+                  <button onClick={handleCopyClick} className="bg-white rounded-lg flex items-center gap-2 text-[14px] px-4 py-2">
+                    {
+                      copyTextState === false ?
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg>
+                      :
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16"><path fillRule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg> 
+                    }
+                    { copyTextState === false ? "Copy" : "Copied" }
+                    </button>
                 </div>
-                <div className="text-[#8C8C8C] text-[15px]">{copyText}</div>
+                <div className="text-[#6b6b6b] text-[15px]">{copyText}</div>
               </div>
 
-              {task === true ? <iframe className="mt-5" width="100%" height="380" src="https://www.youtube.com/embed/NHLnjWTEZps" title="Testing Gemini: Turning images into code" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"></iframe> : null}
+              {task === true ? <iframe className="mt-5" width="100%" height="380" src="https://www.youtube.com/embed/NHLnjWTEZps" title="Testing Gemini: Turning images into code" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"></iframe> : null}
             </div>
           </div>
           <div className="absolute bottom-0 right-0 w-full flex items-center justify-end gap-3 flex-wrap whitespace-nowrap bg-[#F8F8F8] py-3 px-5">

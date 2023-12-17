@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 
 const ChatBotHome = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setisLoading] = useState(true);
   const [textareaHeight, setTextareaHeight] = useState(50);
   const [botMessages, setBotMessages] = useState([
     '## Heading 1\n### Heading 2\nThis is a paragraph of text.\n![Placeholder Image](https://via.placeholder.com/150)\n[Link Example](https://www.example.com)\n**Bold Text**\n*Italic Text*\n- List item 1\n- List item 2\n- List item 3\n> Blockquote example\n`inline code`\n```javascript\n// Code block example\nfunction greet() {\n  return \'Hello!\';\n}\ngreet();\n```',
@@ -62,6 +63,24 @@ const ChatBotHome = () => {
                 </div>
               </div>
               ))}
+
+             {/* loading animation starts */}
+             {isLoading && (
+               <div className="left flex">
+                <div className="bg-[#E8EAEE] text-[#595959] text-[17px] w-fit px-4 py-3" style={{ borderRadius: '20px 20px 20px 0px' }}>
+                  <div className="flex items-center gap-2 text-sm">
+                  <div className="lds-dots relative flex items-center gap-2">
+                    <div className="bg-main w-2.5 h-2.5 rounded-full"></div>
+                    <div className="bg-main w-2.5 h-2.5 rounded-full"></div>
+                    <div className="bg-main w-2.5 h-2.5 rounded-full"></div> {/* Third dot */}
+                  </div>
+                  <p>AI is thinking</p>
+                </div>
+                </div>
+              </div>
+              )}
+             {/* loading animation ends */}
+
 
           {userMessages.map((message, index) => (
                 <div className="right flex justify-end">
