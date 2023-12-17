@@ -10,12 +10,7 @@ const Home = () => {
 
   const text = "MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. ";
   
-  const handleClickScroll = () => {
-    const element = document.getElementById('section2');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
 
 
   return (
@@ -30,10 +25,10 @@ const Home = () => {
        <button className="mainButton flex items-center gap-3 border border-main-dark rounded-full transition hover:bg-main hover:text-white hover:border-main font-medium text-[19px] w-fit px-5 py-3 mt-10 lg2:mt-16 lg2:translate-x-[15px] lg2:scale-[1.1]">Yes, I'm in! <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="currentColor"/></svg></button>
       </div>
       </Fade>
-      <div className="flex items-center justify-center mt-24 absolute bottom-0 left-1/2 -translate-x-1/2 z-30"><button onClick={handleClickScroll}><img src="/images/search-group.svg" alt="search icon" className="animate-bounce" /></button></div>
+      <div className="flex items-center justify-center mt-24 absolute bottom-0 left-1/2 -translate-x-1/2 z-30"><a href="#chatbot"><img src="/images/search-group.svg" alt="search icon" className="animate-bounce" /></a></div>
      </div>
 
-     <div id="section2" className="flex items-center justify-center md2:min-h-screen pt-[100px] sm:mt-[20px] md2:pt-0 md2:mt-0">
+     <div id="chatbot" className="flex items-center justify-center md2:min-h-screen pt-[100px] sm:mt-[20px] md2:pt0 md2:mt-0">
      <div  className="mainCont relative text-main-dark grid grid-cols-1 md2:grid-cols-2 xl:grid-cols-[1.2fr,1fr] gap-12 md2:gap-10 z-30">
      <Fade bottom>
 
@@ -94,7 +89,7 @@ const Home = () => {
       
       <div className="relative text-center z-30 mt-[150px]">
        <div className="text-[38px] sm2:text-[42px] italic mb-4">Don’t chase jobs, attract them!</div>
-       <div className="font-[500]"><button onClick={handleClickScroll} className="text-main font-semibold">Talk to Unibot</button> to clear all your job-search queries and follow our 8-week framework to<br className="hidden md2:flex"/> upskill your profile that impress recruiters. </div>
+       <div className="font-[500]"><a href="#chatbot" className="text-main font-semibold">Talk to Unibot</a> to clear all your job-search queries and follow our 8-week framework to<br className="hidden md2:flex"/> upskill your profile that impress recruiters. </div>
       </div>
       </Fade>
 
