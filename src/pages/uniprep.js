@@ -110,6 +110,29 @@ const Uniprep = () => {
         <ChatBotUniprep/>
         </>
         :
+        tab === "Activity" ?
+        <div className="flex flex-col h-full py-2">
+         <div className="text-[20px] font-[600]">Your Activity</div>
+         <div className="flex-1 flex items-center justify-center gap-5 flex-col w-full max-w-[850px] mx-auto pt-14">
+          <div className="relative bg-[#F8F8F8] border border-[#8C8C8C] rounded-full w-full px-3 py-2"><img src="/images/chart1.svg" alt="chart" className="w-full" /> <svg width="27" height="24" className="absolute -top-7 left-[calc(50%-50px)] -translate-x-1/2" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.0981 22.5C14.9434 24.5 12.0566 24.5 10.9019 22.5L0.942629 5.25C-0.212072 3.25 1.2313 0.750001 3.54071 0.750001L23.4593 0.750003C25.7687 0.750003 27.2121 3.25 26.0574 5.25L16.0981 22.5Z" fill="#4C8AE1"/></svg></div>
+          <div className="grid grid-cols-1 xl:grid-cols-[1fr,300px] gap-5 w-full">
+           <div className="bg-[#F8F8F8] border border-[#8C8C8C] rounded-xl flex items-center sm:justify-center xl:justify-between gap-10 xl:gap-5 flex-col sm:flex-row h-full p-5">
+            <div className="flex items-center sm:items-start justify-between gap-5 sm:gap-0 flex-col h-full">
+              <div><div className="text-[#1B3252] text-center sm:text-left">Tasks Completed:</div><div className="text-main text-[35px] font-[600] text-center mx-auto mt-2">9</div></div>
+              <div><div className="text-[#1B3252] text-center sm:text-left">Tasks Pending:</div><div className="text-[#8C8C8C] text-[35px] font-[600] text-center mx-auto mt-2">4</div>
+            </div></div>
+            <div>
+              <img src="/images/chart2.svg" alt="chart" className="sm:-mr-8 -my-5" />
+            </div>
+           </div>
+           <div className="bg-[#F8F8F8] border border-[#8C8C8C] rounded-xl flex items-center justify-center gap-5 flex-col p-5">
+            <div className="text-main-dark text-[80px] font-[600] border border-[#8C8C8C] rounded-xl leading-none px-5 py-5">4</div>
+            <div className="text-main-dark text-[20px] text-center">More Weeks to Go!</div>
+           </div>
+          </div>
+         </div>
+        </div>
+        :
         null
       }
 
