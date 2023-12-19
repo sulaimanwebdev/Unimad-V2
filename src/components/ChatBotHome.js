@@ -48,6 +48,24 @@ const ChatBotHome = () => {
     }
   }, [botMessages, userMessages]);
 
+
+  const [placeholderIndex, setPlaceholderIndex] = useState(0);
+  const placeholders = [
+    "Type your message here...",
+    "Enter some text...",
+    "Start typing...",
+  ];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPlaceholderIndex((prevIndex) =>
+        prevIndex === placeholders.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000); // Change this value to adjust the delay between placeholder changes
+
+    return () => clearInterval(interval);
+  }, [placeholders]);
+
   return (
     <div className="bg-white rounded-xl order-2 md2:order-none md2:col-start-1 p-2">
       <div ref={chatbotScrollRef} className="customScroll relative bg-[#FBFBFB] h-[350px] rounded-xl overflow-y-auto px-3 py-5">
@@ -106,6 +124,7 @@ const ChatBotHome = () => {
             overflow: textareaHeight < 200 ? 'hidden' : 'scroll',
           }}
         ></textarea>
+        
         <button className="-translate-y-4 pl-3 pr-5" onClick={sendMessage}>
           <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 16.0868V10.0868L8 8.08679L0 6.08679V0.086792L19 8.08679L0 16.0868Z" fill="black" />

@@ -92,7 +92,7 @@ const TestimonialSlider = () => {
         {cards.map((testimonial,index) => (
           <div key={index} className="cardShadow min-w-[300px] max-w-[300px] sm:min-w-[400px] sm:max-w-[400px] bg-white border border-main-dark rounded-2xl px-5 py-6 pb-20">
             <div className="flex items-center gap-3 mb-8">
-            <div className="bg-[#292929] w-20 h-20 rounded-full"></div>
+            <div className="bg-[#292929] min-w-[80px] min-h-[80px] max-w-[80px] max-h-[80px] md:min-w-[100px] md:min-h-[100px] md:max-w-[100px] md:max-h-[100px] rounded-full overflow-hidden"><img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="person" className="w-full h-full object-cover object-center" /></div>
               <div>
                <div className="text-[17px] font-semibold">{testimonial.name}</div>
                <div className="text-[#383838] font-medium mb-[1px]">{testimonial.company}</div>
@@ -100,7 +100,7 @@ const TestimonialSlider = () => {
               </div>
             </div>
 
-            <div className="font-[500] leading-[172%]">{testimonial.comment}</div>
+            <div className="font-regular leading-[172%]">{testimonial.comment}</div>
           </div>
         ))}
       </div>
