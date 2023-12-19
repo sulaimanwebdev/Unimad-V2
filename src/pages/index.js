@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-     <div className="relative max-w-[1200px] mx-auto min-h-[calc(100vh-120px)] md:min-h-[calc(100dvh-150px)] md2:min-h-[calc(100dvh-200px)]">
+     <div className="relative max-w-[1200px] mx-auto min-h-[calc(100vh-120px)] md:min-h-[calc(100dvh-150px)] md2:min-h-[calc(100dvh-170px)] lg2:min-h-[calc(100dvh-200px)]">
      <Header/>
      <img src="/images/circle1.svg" alt="circle bg" className="absolute -top-[200px] sm2:-top-[300px] -right-[200px] sm2:-right-[350px] sm:-right-[500px]" />
 
