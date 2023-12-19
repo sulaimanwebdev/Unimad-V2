@@ -11,12 +11,12 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-     <div className="relative max-w-[1200px] mx-auto min-h-[calc(100dvh-150px)] md2:min-h-[calc(100dvh-200px)]">
+     <div className="relative max-w-[1200px] mx-auto min-h-[calc(100vh-120px)] md:min-h-[calc(100dvh-150px)] md2:min-h-[calc(100dvh-200px)]">
      <Header/>
      <img src="/images/circle1.svg" alt="circle bg" className="absolute -top-[200px] sm2:-top-[300px] -right-[200px] sm2:-right-[350px] sm:-right-[500px]" />
 
      <Fade bottom>
-      <div className="mainCont relative text-main-dark mt-[140px] md:mt-[160px] lg2:mt-[200px] z-30">
+      <div className="mainCont relative text-main-dark mt-[120px] md:mt-[160px] lg2:mt-[200px] z-30">
        <div className="text-[35px] sm3:text-[40px] sm:text-[55px] md:text-[65px] leading-[50px] sm:leading-[117%] lg2:translate-x-[175px] lg2:scale-[1.3]">Want to land multiple<br className="hidden sm:flex"/> interviews in less than<br className="hidden sm:flex"/> <span className="text-main font-semibold inline-flex whitespace-nowrap">8 weeks</span></div>
        <button className="mainButton flex items-center gap-3 border border-main-dark rounded-full transition hover:bg-main hover:text-white hover:border-main font-medium text-[19px] w-fit px-5 py-3 mt-5 md:mt-10 lg2:mt-16 lg2:translate-x-[15px] lg2:scale-[1.1]">Yes, I'm in! <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9Z" fill="currentColor"/></svg></button>
       </div>
