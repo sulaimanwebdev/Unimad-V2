@@ -12,7 +12,7 @@ const Uniprep = () => {
   return (
     <div className="bg-[#F5F5F5] text-main-dark overflow-hidden">
      <div className="w-full p-5">
-      <div className="relative flex items-center justify-between z-30">
+      <div className="relative flex items-center justify-between z-40">
         <Link href="/" className="flex items-center gap-2"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66667 13.3333L0 6.66667L6.66667 0L7.6 0.95L1.88333 6.66667L7.6 12.3833L6.66667 13.3333Z" fill="#1B3252"/></svg> Back</Link>
         <Link href="/" className="flex"><img src="/images/logo.svg" alt="logo" className="w-[120px]" /></Link>
         <div className="relative">

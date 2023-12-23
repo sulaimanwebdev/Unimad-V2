@@ -7,15 +7,14 @@ const StepsAnimation = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5, // Adjust the threshold as needed
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Video section is in view
           const video = videoRef.current;
-          video.play(); // Play the video
+          video.play();
 
           // Pause the video at 4 seconds
           video.addEventListener('timeupdate', () => {
@@ -24,7 +23,7 @@ const StepsAnimation = () => {
             }
           });
 
-          observer.unobserve(entry.target); // Stop observing once played
+          observer.unobserve(entry.target);
         }
       });
     }, options);

@@ -102,7 +102,7 @@ const ChatBotUniprep = () => {
         </div>
       </div>
       <div className="w-full bg-white py-2">
-        <div className="customShadow4  flex items-end gap-2 bg-white overflow-hidden rounded-lg min-h-[50px] max-h-[400px] pl-5">
+        <div className={`customShadow4  flex items-end gap-2 bg-white overflow-hidden min-h-[50px] max-h-[400px] pl-5 ${textareaHeight < 70 ? "rounded-full" : "rounded-lg"}`}>
           <textarea
             placeholder="Ask me anything"
             value={inputValue}

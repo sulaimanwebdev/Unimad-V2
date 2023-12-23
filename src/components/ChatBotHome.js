@@ -112,7 +112,7 @@ const ChatBotHome = () => {
          
         </div>
       </div>
-      <div className="flex items-end gap-2 bg-white border border-main-dark overflow-hidden rounded-lg min-h-[50px] max-h-[400px] pl-5">
+      <div className={`flex items-end gap-2 bg-white border border-main-dark overflow-hidden min-h-[50px] max-h-[400px] pl-5 ${textareaHeight < 70 ? "rounded-full" : "rounded-lg"}`}>
         <textarea
           placeholder="Ask me anything"
           value={inputValue}
