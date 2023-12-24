@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
 import Link from "next/link";
 import Task from "../components/Task";
 import ChatBotUniprep from "../components/ChatBotUniprep";
@@ -9,12 +10,26 @@ const Uniprep = () => {
     const [tab, setTab] = useState("My Plan Progress");
     const [week, setWeek] = useState("Week 4");
 
+    // modal logic
+    let [isOpen, setIsOpen] = useState(false);
+    let [modalStep, setmodalStep] = useState(1);
+
+    function closeModal() {
+      setIsOpen(false);
+      setmodalStep(1);
+    }
+
+    function openModal() {
+      setIsOpen(true);
+    }
+
   return (
+    <>
     <div className="bg-[#F5F5F5] text-main-dark overflow-hidden">
      <div className="w-full p-5">
       <div className="relative flex items-center justify-between z-40">
         <Link href="/" className="flex items-center gap-2"><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66667 13.3333L0 6.66667L6.66667 0L7.6 0.95L1.88333 6.66667L7.6 12.3833L6.66667 13.3333Z" fill="#1B3252"/></svg> Back</Link>
-        <Link href="/" className="flex"><img src="/images/logo.svg" alt="logo" className="w-[120px]" /></Link>
+        <Link href="/" className="flex"><img src="/images/logo-beta.svg" alt="logo" className="w-[130px]" /></Link>
         <div className="relative">
          <button onClick={()=> {setMenu(!menu)}} className={`${menu === false ? "visible opacity-100" : "invisible opacity-0"}`}><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16V14H24V16H0ZM0 9V7H24V9H0ZM0 2V0H24V2H0Z" fill="#1B3252"/></svg></button>
          <div className={`customShadow3 bg-white rounded-lg absolute top-0 right-0 w-[170px] overflow-hidden z-30 ${menu === true ? "block" : "hidden"}`}>
@@ -28,7 +43,7 @@ const Uniprep = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md2:grid-cols-[300px,1fr] gap-5 min-h-[calc(100vh-132px)] mt-20 md2:mt-16">
+      <div className="grid grid-cols-1 md2:grid-cols-[300px,1fr] gap-5 min-h-[calc(100vh-142px)] mt-20 md2:mt-16">
       <div className="flex gap-5 flex-col">
         <div className="customShadow2 bg-white text-center rounded-2xl px-3 py-5">
           <img src="/images/person.png" alt="person" className="border-[5px] border-main-dark w-[100px] h-[100px] object-cover object-center rounded-full overflow-hidden mx-auto -mt-[65px]" />
@@ -133,6 +148,16 @@ const Uniprep = () => {
          </div>
         </div>
         :
+        tab === "Talk to us" ?
+        <>
+         <div className="text-[25px] font-[600] mb-2 mt-1">Go on, Ask away!</div>
+        <div className="text-[15px] max-w-[600px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
+        <textarea className="w-full max-w-[600px] border border-[#0000004D] outline-main rounded-lg bg-white h-[200px] resize-none p-3 mt-5"></textarea>
+        <div className="flex items-center justify-end w-full max-w-[600px]">
+          <button onClick={openModal} className="bg-main-dark text-white rounded-full transition hover:bg-main px-5 py-2 mt-2">Send</button>
+        </div>
+        </>
+        :
         null
       }
 
@@ -141,6 +166,72 @@ const Uniprep = () => {
      </div>
      </div>
     </div>
+
+
+
+
+   {/* Modal */}
+   <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-[100]" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-[#00000066]" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-[500px] transform overflow-hidden rounded-xl bg-white text-main-dark p-3 pb-5 text-left align-middle shadow-xl transition-all">
+                 <div className="flex items-center justify-end mb-4">
+                  <button onClick={closeModal}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="#1B3252"/></svg></button>
+                 </div>
+
+                 {
+                  modalStep === 1 ?
+                  <div className="flex items-center justify-center flex-col text-center">
+                   <img src="/images/person.png" alt="person" className="border-[5px] border-main-dark w-[80px] h-[80px] object-cover object-center rounded-full overflow-hidden" />
+                   <div className="text-[20px] font-[600] mt-5">Hello Tanya Fernandez!</div>
+                   <div className="text-[15px] mt-2">Answer a few questions to get onboard</div>
+                   <button onClick={()=> {setmodalStep(2)}} className="flex items-center gap-3 text-[15px] bg-main-dark text-white rounded-full transition hover:bg-main px-5 py-2 mt-10">Lets go <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.97297 6L0 1.4L1.51351 0L8 6L1.51351 12L0 10.6L4.97297 6Z" fill="currentColor"/></svg></button>
+                 </div>
+                 :
+                 modalStep === 2 ?
+                 <div className="flex items-center justify-center flex-col text-center">
+                   <div className="text-[22px] mb-4">Your First Name?</div>
+                   <input type="text" placeholder="Enter Name" className="w-full max-w-[300px] rounded-lg bg-white border border-[#0000004D] outline-main placeholder:text-[#0000004D] px-3 py-2" />
+                   <div className="flex items-center justify-center gap-3 mt-16">
+                   <button onClick={()=> {setmodalStep(1)}} className="flex items-center gap-3 text-[15px] bg-white text-main-dark border-2 border-main-dark rounded-full transition hover:bg-main-dark hover:text-white px-5 py-1.5">Back <svg width="8" height="12" className="-rotate-[180deg]" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.97297 6L0 1.4L1.51351 0L8 6L1.51351 12L0 10.6L4.97297 6Z" fill="currentColor"/></svg></button>
+                   <button className="flex items-center gap-3 text-[15px] bg-main-dark text-white rounded-full transition hover:bg-main px-5 py-2">Next <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.97297 6L0 1.4L1.51351 0L8 6L1.51351 12L0 10.6L4.97297 6Z" fill="currentColor"/></svg></button>
+                   </div>
+                 </div>
+                 :
+                 null
+                 }
+
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+
+  
+    </>
   )
 }
 

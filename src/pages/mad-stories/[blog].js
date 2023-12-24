@@ -12,7 +12,7 @@ const Blog = () => {
          <div className="relative text-main-dark min-h-[calc(100vh-452px)] z-30">
             <div className="relative">
              <div className="relative bg-[#FAFAFA] rounded-t-3xl min-h-[calc(100vh-453px)] overflow-hidden pb-20 z-30">
-              <Link href="/mad-stories" className="absolute top-5 left-5 bg-white rounded-md flex items-center gap-2 flex-row-reverse px-3 py-2 z-20">Go back <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16"><path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/></svg></Link>
+              <Link href="/mad-stories" className="absolute top-5 left-5 bg-white rounded-md flex items-center gap-2 px-2 py-1 z-20"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16"><path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/></svg></Link>
               <img src="/images/cover.png" alt="blog cover" className="w-full h-[400px] object-cover object-bottom" />
               <div className="px-10 py-7">
                <div className="text-[30px] sm:text-[35px] font-semibold">Blog Title</div>

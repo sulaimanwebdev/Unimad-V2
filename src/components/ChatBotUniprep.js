@@ -92,7 +92,7 @@ const ChatBotUniprep = () => {
 
               {userMessages.map((message, index) => (
                 <div className="right flex justify-end" key={`user-${index}`}>
-                  <div className="bg-[#EFF7FF] text-main-dark text-[17px] px-4 py-3 px-4 py-3" style={{ borderRadius: "20px 20px 0px 20px" }}>
+                  <div className="bg-[#EFF7FF] text-main-dark text-[17px] px-4 py-3" style={{ borderRadius: "20px 20px 0px 20px" }}>
                     <ReactMarkdown className="prose">{message}</ReactMarkdown>
                   </div>
                 </div>

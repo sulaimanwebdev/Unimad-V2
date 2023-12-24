@@ -13,7 +13,7 @@ const About = () => {
             <div className="relative">
              <div className="relative bg-[#FAFAFA] rounded-3xl text-center px-5 py-10 z-30">
               <div className="mb-16">Unimad is the story of 3 students who went through the dark side of the moon to get a full-time job in the UK. Their journey included an ungodly amount of rejections, recruiters ghosting them, rejections because of visa status, and 1111 other reasons. This also revealed a truth that the barrier to employment was not talent, but the right information. This gave rise to Unimad — a platform offering every student the insights needed to dominate their job search, at no cost.</div>
-              <div className="text-[30px] sm3:text-[35px] md:text-[40px] mb-16">Empowering the understimated 💪</div>
+              <div className="text-[30px] sm3:text-[35px] md:text-[40px] mb-16"><span className="text-main">Empowering</span> the understimated 💪</div>
               <div className="mb-16">At Unimad, our mission is to elevate our community’s profile and story in a way that converts interviews and eventually leads to a job. Our motto is that you should never chase jobs, you should attract them. The best way to do so is to narrate a story that sells. This is exactly the purpose of our 8-week framework and every element of it is crafted with the singular goal of helping you stand out as not just a candidate, but the candidate.</div>
              </div>
              <img src="/images/circle5.svg" alt="circle bg" className="absolute -top-[150px] -left-[500px]" />
@@ -23,7 +23,7 @@ const About = () => {
         </div>
 
        <Footer/>
-     </div>  
+     </div>
     </>
   )
 }
