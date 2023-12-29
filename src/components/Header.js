@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
      <div className="fixed top-0 pt-5 left-1/2 -translate-x-1/2 w-[calc(100%-40px)] z-[40]">
-     <div className="headerCont max-w-[1250px] bg-white rounded-full mx-auto">
+     <div className="headerCont max-w-[1160px] bg-white rounded-full mx-auto">
        <div className="mainCont flex items-center justify-between gap-5 py-3 md2:py-0">
         <Link href="/" className="flex w-fit"><img src="/images/logo.svg" alt="logo" className="w-[120px] md2:w-[150px]" /></Link>
         <div className="hidden md2:flex items-center justify-center gap-5 lg:gap-8 h-full top-auto right-auto text-main-dark bg-transparent translate-y-1">
@@ -16,7 +16,7 @@ const Header = () => {
           <Link href="/framework" className="flex items-center justify-center font-[600] w-fit h-[65px] -translate-y-1 px-2 transition hover:bg-main-dark hover:text-white">Framework</Link>
           <Link href="/uniprep" className="flex items-center justify-center font-[600] w-fit h-[65px] -translate-y-1 px-2 transition hover:bg-main-dark hover:text-white">Uniprep</Link>
         </div>
-         <Link href="/signin" className="hidden md2:flex button2 px-5 py-2.5 rounded-full bg-main transition hover:bg-main-dark text-white w-fit">Sign in with LinkedIN</Link>
+         <Link href="/signin" className="hidden md2:flex button2 px-5 py-2.5 rounded-full bg-main transition hover:bg-main-dark text-white w-fit -mr-2">Sign in with LinkedIN</Link>
          <button onClick={()=> {setmenu("translate-x-0")}} className="flex md2:hidden"><svg width="25" height="17" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.14563H21" stroke="#0A256B" strokeWidth="2" strokeLinecap="round"/><path d="M1 6.70117H21" stroke="#0A256B" strokeWidth="2" strokeLinecap="round"/><path d="M1 12.2567H21" stroke="#0A256B" strokeWidth="2" strokeLinecap="round"/></svg></button>
        </div>
 
