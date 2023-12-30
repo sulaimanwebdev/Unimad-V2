@@ -28,10 +28,6 @@ const Home = () => {
      
      
      
-     
-     
-     
-     
      <div id="plan" className="mainCont relative flex items-center justify-center flex-col md2:min-h-screen -scroll-my-[100px] mt-[100px]">
      <div className="relative text-main-dark mt-[150px] md2:mt-[200px] z-30">
      <Fade bottom>
@@ -48,59 +44,23 @@ const Home = () => {
       </Fade>
      </div>
 
-     <img src="/images/circle3.svg" alt="circle bg" className="absolute -bottom-[300px] -left-[500px]" />
     </div>
      
      
      
-     
-
 
 
     <div id="chatbot" className="flex items-center justify-center mt-[200px]">
-     <div className="mainCont relative">
-     <div className="relative text-main-dark grid grid-cols-1 md2:grid-cols-2 xl:grid-cols-[1.2fr,1fr] gap-12 md2:gap-10 z-30">
+     <div className="mainCont relative w-full">
+     <div className="relative max-w-[1000px] text-main-dark mx-auto z-30">
+     <div className="text-[38px] sm3:text-[42px] text-center mb-7">I’m<span className="text-main font-semibold">Unibot</span>, your Personal Chatbot</div>
      <Fade bottom>
-
      {/* ChatBot Starts */}
       <ChatBotHome/>
      {/* ChatBot Ends */}
-
-      </Fade>
-
-      <Fade bottom>
-      <div className="order-1 md2:order-none md2:col-start-2">
-        <div className="text-[30px] sm3:text-[40px] leading-[117%] mb-6">Go ahead, ask your<br className="hidden sm3:flex"/> <span className="text-main font-semibold">Personal Chatbot for</span><br className="hidden sm3:flex"/> Job hunt queries</div>
-        <div className="typingAnimation text-black font-normal italic">
-        “
-        <TypeAnimation
-        cursor={true}
-      sequence={[
-        "Unibot's my name, acing your job hunt is my game.",
-        1000, // wait 1s before replacing
-        "Unibot's asdasd asd 123 asd",
-        1000,
-        "asduhybhasd asdjb asjd asjd asd",
-        1000,
-        "jasdndjkn23iun",
-        1000
-      ]}
-      wrapper="span"
-      speed={50}
-      repeat={Infinity}
-    />
-    ”
-        </div>
-        <div className="flex items-center gap-x-5 gap-y-3 flex-wrap mt-8">
-        <button className="mainButton flex px-4 py-3 font-[600] bg-white border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">How do I make a resume?</button>
-        <button className="mainButton flex px-4 py-3 font-[600] bg-white border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">Best Job hunt websites?</button>
-        <button className="mainButton flex px-4 py-3 font-[600] bg-white border border-main-dark rounded-lg transition hover:bg-main hover:text-white hover:border-main w-fit">Top University for Data science</button>
-        </div>
-      </div>
       </Fade>
      </div>
-     <img src="/images/circle3.svg" alt="circle bg" className="hidden sm2:flex absolute bottom-[200px] md:bottom-[100px] md2:-bottom-[480px] -left-[200px] w-[1200px]" />
-
+     <img src="/images/circle3.svg" alt="circle bg" className="hidden sm2:flex absolute bottom-[200px] md:-bottom-[100px] -left-[200px] w-[1500px]" />
 
      <Fade bottom>
       
@@ -142,13 +102,6 @@ const Home = () => {
 
       <img src="/images/circle2.svg" alt="circle bg" className="absolute -bottom-[500px] -left-[500px] md2:-left-[800px] xl:-left-[1000px]" />
      </div>
-
-
-
-    {/* --------------------------------------- */}
-
-    
-
 
 
 

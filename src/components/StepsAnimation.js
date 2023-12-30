@@ -42,7 +42,7 @@ const StepsAnimation = () => {
       <video
         ref={videoRef}
         src="/images/plan.mp4"
-        className="-mt-5 relative  flex z-30"
+        className="-ml-7 -mt-5 relative  flex z-30"
         muted
         loop={false}
         playsInline
