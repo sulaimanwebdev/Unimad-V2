@@ -53,7 +53,7 @@ const Home = () => {
     <div id="chatbot" className="flex items-center justify-center mt-[200px]">
      <div className="mainCont relative w-full">
      <div className="relative max-w-[1000px] text-main-dark mx-auto z-30">
-     <div className="text-[38px] sm3:text-[42px] text-center mb-7">I’m<span className="text-main font-semibold">Unibot</span>, your Personal Chatbot</div>
+     <div className="text-[38px] sm3:text-[42px] text-center mb-7">I’m <span className="text-main font-semibold">Unibot</span>, your Personal Chatbot</div>
      <Fade bottom>
      {/* ChatBot Starts */}
       <ChatBotHome/>
@@ -100,15 +100,20 @@ const Home = () => {
       </div>
      
 
-      <img src="/images/circle2.svg" alt="circle bg" className="absolute -bottom-[500px] -left-[500px] md2:-left-[800px] xl:-left-[1000px]" />
+      <img src="/images/circle2.svg" alt="circle bg" className="absolute -bottom-[100px] md:-bottom-[400px] -left-[200px] xl:-left-[100px] w-[1000px]" />
      </div>
 
 
 
-     <div className="relative overflow-hidden z-30">
+     <div className="relative">
+     <div className="relative z-30">
      <Fade bottom>
      <TestimonialSlider/>
      </Fade>
+     
+     </div>
+     <img src="/images/circle10.svg" alt="circle bg" className="absolute -right-[200px] md:-right-[500px] -bottom-[200px] md:-bottom-[400px] -z-[999]" />
+
      </div>
 
      <Fade bottom>

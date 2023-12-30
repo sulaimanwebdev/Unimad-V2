@@ -79,9 +79,9 @@ const ChatBotHome = () => {
   return (
     <div className={`relative bg-[#F3F3F3] border-[10px] border-white rounded-3xl order-2 md2:order-none md2:col-start-1 w-full p-2 ${isChatVisible && "visible"}`}>
       {!isChatVisible && (
-        <div className="flex items-center justify-end gap-24 flex-col text-center h-[450px] bg-[#F3F3F3] rounded-xl py-5">
+        <div className="flex items-center justify-end gap-24 flex-col text-center min-h-[450px] bg-[#F3F3F3] rounded-xl p-5">
           <div>
-           <img src="/images/bot.svg" alt="bot icon" className="mx-auto" />
+           <img src="/images/bot.svg" alt="bot icon" className="mx-auto mb-2" />
            <div className="text-[25px]">“Go ahead, ask me for job hunt queries”</div>
           </div>
 
