@@ -8,7 +8,7 @@ import StepsAnimation from "@/components/StepsAnimation";
 
 const Home = () => {
 
-  const text = "MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. ";
+  const text = "MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES. MAD LIVES. MAD VIBES.";
 
   return (
     <div className="overflow-hidden">
@@ -32,7 +32,7 @@ const Home = () => {
      <div className="relative text-main-dark mt-[150px] md2:mt-[200px] z-30">
      <Fade bottom>
 
-      <div className="text-[38px] sm3:text-[42px] text-center mb-5"><span className="text-main font-semibold">AI</span> tailored Plan, Just for you!</div>
+      <div className="text-[35px] sm3:text-[42px] text-center mb-5"><span className="text-main font-semibold">AI</span> tailored Plan, Just for you!</div>
       </Fade>
       <Fade bottom>
        <div className="flex items-center justify-center">
@@ -53,7 +53,7 @@ const Home = () => {
     <div id="chatbot" className="flex items-center justify-center mt-[200px]">
      <div className="mainCont relative w-full">
      <div className="relative max-w-[1000px] text-main-dark mx-auto z-30">
-     <div className="text-[38px] sm3:text-[42px] text-center mb-7">I’m <span className="text-main font-semibold">Unibot</span>, your Personal Chatbot</div>
+     <div className="text-[35px] sm3:text-[42px] text-center mb-7">I’m <span className="text-main font-semibold">Unibot</span>, your Personal Chatbot</div>
      <Fade bottom>
      {/* ChatBot Starts */}
       <ChatBotHome/>
@@ -65,7 +65,7 @@ const Home = () => {
      <Fade bottom>
       
       <div className="relative text-center z-30 mt-[100px]">
-       <div className="text-[38px] sm2:text-[42px] italic mb-4">Don’t chase jobs, attract them!</div>
+       <div className="text-[35px] sm2:text-[42px] italic mb-4">Don’t chase jobs, attract them!</div>
        <div className="font-normal"><a href="#chatbot" className="text-main font-semibold">Talk to Unibot</a> to clear all your job-search queries and follow our 8-week framework to<br className="hidden md2:flex"/> upskill your profile that impress recruiters. </div>
       </div>
       </Fade>
@@ -86,9 +86,9 @@ const Home = () => {
 
 
      <div className="mainCont relative text-main-dark z-30">
-      <div className="relative text-center z-30 mt-[150px] ">
+      <div className="relative text-center z-30 mt-[120px] sm3:mt-[150px] ">
       <Fade bottom>
-       <div className="text-[42px] leading-[117%] mb-6"><span className="text-main font-semibold">8 Steps</span> to land your Dream Job</div>
+       <div className="text-[35px] sm3:text-[42px] leading-[117%] mb-6"><span className="text-main font-semibold">8 Steps</span> to land your Dream Job</div>
        <div className="font-normal text-center max-w-[650px] mx-auto">We're here to help students like you with the knowledge, strategies, and resources to crack multiple interviews which eventually lead you to secure a job.</div>
       </Fade>
       <Fade bottom>

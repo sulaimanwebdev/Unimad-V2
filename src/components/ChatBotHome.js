@@ -186,7 +186,7 @@ const ChatBotHome = () => {
        
        {blurChat && 
        <div className="absolute top-0 left-0 flex items-center justify-center gap-7 flex-col w-full h-full p-5" style={{backdropFilter: "blur(8px)"}}>
-        <div className="text-[38px] sm3:text-[42px] text-center"><span className="text-main font-semibold">Sign in</span> for more prompts</div>
+        <div className="text-[35px] sm3:text-[42px] text-center"><span className="text-main font-semibold">Sign in</span> for more prompts</div>
         <button className="button2 bg-main transition hover:bg-main-dark text-white flex items-center gap-3 text-center font-medium rounded-full w-fit mx-auto px-6 py-4">Take me in <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.675 9H0.5V7H12.675L7.075 1.4L8.5 0L16.5 8L8.5 16L7.075 14.6L12.675 9Z" fill="white"/></svg></button>
        </div>
        }

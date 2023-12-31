@@ -125,8 +125,8 @@ const TestimonialSlider = () => {
 
   return (
     <>
-      <div className="relative text-main-dark mt-[160px] z-30">
-        <div className="text-[42px] text-center mb-10 px-5">Listen to our lads!</div>
+      <div className="relative text-main-dark mt-[150px] sm3:mt-[160px] z-30">
+        <div className="text-[35px] sm3:text-[42px] text-center mb-10 px-5">Listen to our lads!</div>
         <div className="testimonial-slider cursor-grab select-none" ref={testimonialRef}>
           <div className="flex gap-[24px]">
             {cards.map((testimonial, index) => (
