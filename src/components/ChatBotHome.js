@@ -26,6 +26,14 @@ const ChatBotHome = () => {
     if (inputValue.trim() !== '') {
       const newMessage = inputValue.trim();
       setUserMessages([...userMessages, newMessage]);
+      setTimeout(() => {
+        if (chatbotScrollRef.current) {
+          chatbotScrollRef.current.scrollTo({
+            top: chatbotScrollRef.current.scrollHeight,
+            behavior: 'smooth',
+          });
+        }
+      }, 1);
       setInputValue('');
       handleChatVisibility();
     }
