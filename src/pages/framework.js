@@ -49,13 +49,13 @@ const Framework = () => {
                 </div>
 
                 <div className="week">
-                <div className="week-content relative h-[calc(100vh-200px)] flex md2:items-center md2:justify-center gap-[50px] md2:gap-[200px] flex-col md2:flex-row-reverse md2:-translate-x-[94px]">
+                <div className="week-content relative h-[calc(100vh-200px)] flex md2:items-center md2:justify-center gap-[50px] md2:gap-[200px] flex-col md2:flex-row md2:translate-x-[110px]">
                     <div className="text-[35px]">Week 2</div>
                     <div className="relative bg-white rounded-xl text-center py-5 md2:px-7 md2:pl-10">
                      <div className="text-[19px] font-semibold mb-2 pl-10 px-7 md2:pl-0 md2:px-0">Keywords That Convert</div>
                      <div className="text-[15px] max-w-[250px] mx-auto px-[10px] md2:px-0">With your chosen role in focus, it's time to collect the key terms and skills from your job description research. We'll strategically infuse these keywords into your resume and LinkedIn ensuring your profile resonates with the target role.</div>
                      <div className="customShadow absolute -top-[20px] -left-[20px] bg-white w-16 h-16 text-[32px] flex items-center justify-center rounded-full">🔑</div>
-                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:left-auto md2:-right-[110px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
+                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:-left-[125px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
                     </div>
                 </div>
                 </div>
@@ -75,13 +75,13 @@ const Framework = () => {
                 </div>
 
                 <div className="week">
-                <div className="week-content relative h-[calc(100vh-200px)] flex md2:items-center md2:justify-center gap-[50px] md2:gap-[200px] flex-col md2:flex-row-reverse md2:-translate-x-[94px]">
+                <div className="week-content relative h-[calc(100vh-200px)] flex md2:items-center md2:justify-center gap-[50px] md2:gap-[200px] flex-col md2:flex-row md2:translate-x-[110px]">
                     <div className="text-[35px]">Week 4</div>
                     <div className="relative bg-white rounded-xl text-center py-5 md2:px-7 md2:pl-10">
                      <div className="text-[19px] font-semibold mb-2 pl-10 px-7 md2:pl-0 md2:px-0">Content, Connect, & Comment</div>
                      <div className="text-[15px] max-w-[250px] mx-auto px-[10px] md2:px-0">It's time to broadcast your knowledge. Post authoritative content on LinkedIn, connect with your industry professionals, and engage on their posts by adding thought-provoking comments that reflect your deep understanding of the domain.</div>
                      <div className="customShadow absolute -top-[20px] -left-[20px] bg-white w-16 h-16 text-[35px] flex items-center justify-center rounded-full">🙋🏻</div>
-                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:left-auto md2:-right-[88px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
+                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:-left-[103px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
                     </div>
                 </div>
                 </div>
@@ -93,19 +93,19 @@ const Framework = () => {
                      <div className="text-[19px] font-semibold mb-2 pl-10 px-7 md2:pl-0 md2:px-0">Cultivating Company Connections</div>
                      <div className="text-[15px] max-w-[250px] mx-auto px-[10px] md2:px-0">Enhance your list with 10 additional companies who hire for your chosen role and connect with their key employees. Your objective is to engage in discussions that reveal the core competencies that distinguish top performers in your field.</div>
                      <div className="customShadow absolute -top-[20px] -left-[20px] bg-white w-16 h-16 text-[35px] flex items-center justify-center rounded-full">💼</div>
-                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:-left-[94px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
+                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:-left-[92px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
                     </div>
                 </div>
                 </div>
 
                 <div className="week">
-                <div className="week-content relative h-[calc(100vh-200px)] flex md2:items-center md2:justify-center gap-[50px] md2:gap-[200px] flex-col md2:flex-row-reverse md2:-translate-x-[94px]">
+                <div className="week-content relative h-[calc(100vh-200px)] flex md2:items-center md2:justify-center gap-[50px] md2:gap-[200px] flex-col md2:flex-row md2:translate-x-[110px]">
                     <div className="text-[35px]">Week 6</div>
                     <div className="relative bg-white rounded-xl text-center py-5 md2:px-7 md2:pl-10">
                      <div className="text-[19px] font-semibold mb-2 pl-10 px-7 md2:pl-0 md2:px-0">Building Your Portfolio</div>
                      <div className="text-[15px] max-w-[250px] mx-auto px-[10px] md2:px-0">Let’s refine your resume with Unibot. We’ll also build a no-code website or a sleek Notion page as a portfolio of your professional story and make sure that your resume, LinkedIn profile, and portfolio are all interconnected.</div>
                      <div className="customShadow absolute -top-[20px] -left-[20px] bg-white w-16 h-16 text-[35px] flex items-center justify-center rounded-full">📇</div>
-                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:left-auto md2:-right-[111px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
+                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:-left-[126px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
                     </div>
                 </div>
                 </div>
@@ -124,13 +124,13 @@ const Framework = () => {
 
 
                 <div className="week">
-                <div className="week-content relative md2:h-[calc(100vh-200px)] flex md2:items-center md2:justify-center gap-[50px] md2:gap-[200px] flex-col md2:flex-row-reverse md2:-translate-x-[94px]">
+                <div className="week-content relative md2:h-[calc(100vh-200px)] flex md2:items-center md2:justify-center gap-[50px] md2:gap-[200px] flex-col md2:flex-row md2:translate-x-[110px]">
                     <div className="text-[35px]">Week 8</div>
                     <div className="relative bg-white rounded-xl text-center py-5 md2:px-7 md2:pl-10">
                      <div className="text-[19px] font-semibold mb-2 pl-10 px-7 md2:pl-0 md2:px-0">Unimad’s Secret Sauce</div>
                      <div className="text-[15px] max-w-[250px] mx-auto px-[10px] md2:px-0">Wrap up your journey by creating a compelling Value Proposition Document for each prospective employer. This personalized presentation is your closing argument, your pitch, and your handshake – all in one.</div>
                      <div className="customShadow absolute -top-[20px] -left-[20px] bg-white w-16 h-16 text-[35px] flex items-center justify-center rounded-full">🤫</div>
-                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:left-auto md2:-right-[110px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
+                     <div className="blueCircle customShadowBlue absolute top-1/2 -left-[66px] md2:-left-[125px] -translate-y-1/2 w-6 h-6 bg-main rounded-full z-20"></div>
                     </div>
                 </div>
                 </div>
