@@ -48,7 +48,18 @@ const Task = (props) => {
             <div className="mb-5">Now uncover the roles that resonate with your core. Utilize resources like Linkedin, Glassdoor, and Indeed to explore job descriptions. Pay attention to roles that frequently appear and those that match your skill set. Attend career fairs and networking events at your university to leam about different positions firsthand.</div>
            
             <div className="mb-5"><b>Act 3-Your Professional Triad</b></div>
-            <div className="mb-5">From a pyramid of possibilities, emerge your chosen 3 roles that align closely with your strengths and interests. These roles should represent a mix of your passions, skills, market demand, and personals</div>
+            <div className="mb-7">From a pyramid of possibilities, emerge your chosen 3 roles that align closely with your strengths and interests. These roles should represent a mix of your passions, skills, market demand, and personals</div>
+
+            <div className="bg-[#DDEDFE] font-[600] rounded-lg mb-10 p-3">Think about everything that you are good at and note down 5 top skills of yours. It can be Sales, Marketing or one of your core subjects.</div>
+
+            <div className="mb-10">
+            <div className="mb-2">Fill in your core skills & competencies 👇</div>
+             <input type="text" placeholder="Task" className="flex w-[250px] border border-[#0000004D] rounded-md outline-main px-3 py-2" />
+             <button className="flex bg-main-dark text-white font-[600] rounded-full mt-3 px-5 py-2">Submit</button>
+            </div>
+
+            <div className="mb-5">You have completed Act 1 — Proceed to the next act.</div>
+
 
             </div>
             <div className={`${props.locked === true ? "blur-[4px]" : ""} mt-5`}>
