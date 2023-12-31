@@ -81,7 +81,7 @@ const ChatBotUniprep = () => {
        
         <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[22px] text-center font-semibold z-30">Unibot🤖</div>
         <div className="relative flex-1 z-30">
-          <div ref={chatbotScrollRef} className={`customScroll relative rounded-t-xl md2:max-h-[calc(100vh-100px)] overflow-y-auto pr-2 ${isChatVisible ? "max-h-[350px]" : ""}`}>
+          <div ref={chatbotScrollRef} className={`customScroll relative rounded-t-xl md2:max-h-[calc(100vh-100px)] overflow-x-hidden overflow-y-auto pr-2 ${isChatVisible ? "max-h-[350px]" : ""}`}>
             
             
           {!isChatVisible && (
@@ -102,11 +102,12 @@ const ChatBotUniprep = () => {
       )}
 
 
-{isChatVisible && (
+            {isChatVisible && (
             <div className="flex flex-col gap-12 justify-end relative bg-white h-full min-h-[350px] md2:min-h-[calc(100vh-100px)] rounded-xl pb-3">
               {botMessages.map((message, index) => (
-                <div className="left flex" key={`bot-${index}`}>
-                  <div className="bg-[#E8EAEE] text-[#595959] text-[17px] px-4 py-3" style={{ borderRadius: "20px 20px 20px 0px" }}>
+                <div className="left flex items-start gap-2" key={`bot-${index}`}>
+                 <img src="/images/bot.svg" alt="bot" className="w-[40px] translate-y-1" />
+                  <div className="bg-[#EFF7FF] text-[#1B3252] text-[17px] px-4 py-3" style={{ borderRadius: "20px 20px 20px 0px" }}>
                     <ReactMarkdown className="prose">{message}</ReactMarkdown>
                     <div ref={messagesEndRef}></div>
                   </div>
@@ -116,8 +117,9 @@ const ChatBotUniprep = () => {
 
               {/* loading animation starts */}
               {isLoading && (
-               <div className="left flex">
-                <div className="bg-[#E8EAEE] text-[#595959] text-[17px] w-fit px-4 py-3" style={{ borderRadius: '20px 20px 20px 0px' }}>
+               <div className="left flex items-start gap-2">
+                <img src="/images/bot.svg" alt="bot" className="w-[40px] translate-y-1" />
+                <div className="bg-[#EFF7FF] text-[#595959] text-[17px] w-fit px-4 py-3" style={{ borderRadius: '20px 20px 20px 0px' }}>
                   <div className="flex items-center gap-2 text-sm">
                   <div className="lds-dots relative flex items-center gap-2">
                     <div className="bg-main w-2.5 h-2.5 rounded-full"></div>
@@ -133,10 +135,11 @@ const ChatBotUniprep = () => {
 
 
               {userMessages.map((message, index) => (
-                <div className="right flex justify-end" key={`user-${index}`}>
-                  <div className="bg-[#EFF7FF] text-main-dark text-[17px] px-4 py-3" style={{ borderRadius: "20px 20px 0px 20px" }}>
+                <div className="right flex items-start justify-end gap-2" key={`user-${index}`}>
+                  <div className="bg-[#F0F0F0] text-main-dark text-[17px] px-4 py-3" style={{ borderRadius: "20px 20px 0px 20px" }}>
                     <ReactMarkdown className="prose">{message}</ReactMarkdown>
                   </div>
+                  <img src="/images/person.png" alt="person" className="w-[40px] translate-y-1" />
                 </div>
               ))}
             </div>

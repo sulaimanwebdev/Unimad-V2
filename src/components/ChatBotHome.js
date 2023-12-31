@@ -105,7 +105,7 @@ const ChatBotHome = () => {
 
       {isChatVisible && (
         <>
-          <div ref={chatbotScrollRef} className={`customScroll relative bg-[#F3F3F3] rounded-xl h-[450px] overflow-y-auto px-3 py-3`}>
+          <div ref={chatbotScrollRef} className={`customScroll relative bg-[#F3F3F3] rounded-xl h-[450px]  overflow-x-hidden overflow-y-auto px-3 py-3`}>
             <div className="flex flex-col justify-end min-h-[450px] gap-12">
             
             {botMessages.map((message, index) => (
