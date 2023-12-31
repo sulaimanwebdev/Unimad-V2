@@ -12,7 +12,7 @@ const Uniprep = () => {
     const [week, setWeek] = useState("Week 4");
 
     // task tracking logic
-    const [completedTasks, setCompletedTasks] = useState(3);
+    const [completedTasks, setCompletedTasks] = useState(16);
     const totalTasks = 24;
     const totalWeeks = 8;
     const tasksPerWeek = 3;

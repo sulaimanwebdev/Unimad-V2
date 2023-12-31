@@ -66,7 +66,7 @@ const TaskTracker = ({completedTasks, totalTasks}) => {
   };
 
   return (
-    <div className="relative bg-[#F8F8F8] border border-[#8C8C8C] grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr] gap-2 rounded-full w-full px-3 py-2">
+    <div className="relative bg-[#F8F8F8] border border-[#8C8C8C] grid grid-cols-2 sm3:grid-cols-4 gap-y-14 sm:grid-cols-8 gap-2 rounded-lg sm:rounded-full w-full px-3 py-2">
       {renderWeeks()}
     </div>
   );
