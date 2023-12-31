@@ -11,16 +11,14 @@ const Uniprep = () => {
     const [tab, setTab] = useState("My Plan Progress");
     const [week, setWeek] = useState("Week 4");
 
-    // toast popup logic
-    const [showToast, setShowToast] = useState(false);
+    // task tracking logic
+    const [completedTasks, setCompletedTasks] = useState(3);
+    const totalTasks = 24;
+    const totalWeeks = 8;
+    const tasksPerWeek = 3;
 
-    const handleShowToast = () => {
-      setShowToast(true);
-    };
-  
-    const handleHideToast = () => {
-      setShowToast(false);
-    };
+    const pendingTasks = Math.max(0, totalWeeks * tasksPerWeek - completedTasks);
+    const weeksLeft = Math.min(totalWeeks, totalWeeks - Math.floor(completedTasks / tasksPerWeek));
 
 
   return (
@@ -130,34 +128,34 @@ const Uniprep = () => {
          <div className="text-[20px] font-[600]">Your Activity</div>
          <div className="flex-1 flex items-center justify-center gap-5 flex-col w-full max-w-[850px] mx-auto pt-14">
 
-         {/* <div className="relative bg-[#F8F8F8] border border-[#8C8C8C] grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,1fr] gap-2 rounded-full w-full px-3 py-2">
-            <div className="week1 bg-[#D9D9D9] h-[32px] grid grid-cols-3 rounded-full divide-x divide-white"><div className="task relative bg-main rounded-l-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task2 relative bg-main flex items-center justify-center"><img src="/images/tick.svg" alt="tick" className="fullWeekCompletedTick" draggable={false} /> <img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task relative bg-main rounded-r-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div></div>
-            <div className="week2 bg-[#D9D9D9] h-[32px] grid grid-cols-3 rounded-full divide-x divide-white"><div className="task relative bg-main rounded-l-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task2 relative bg-main flex items-center justify-center"><img src="/images/tick.svg" alt="tick" className="fullWeekCompletedTick" draggable={false} /> <img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task relative bg-main rounded-r-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div></div>
-            <div className="week3 bg-[#D9D9D9] h-[32px] grid grid-cols-3 rounded-full divide-x divide-white"><div className="task relative bg-main rounded-l-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task2 relative bg-main flex items-center justify-center"><img src="/images/tick.svg" alt="tick" className="fullWeekCompletedTick" draggable={false} /> <img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task relative bg-main rounded-r-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div></div>
-            <div className="week4 bg-[#D9D9D9] h-[32px] grid grid-cols-3 rounded-full divide-x divide-white"><div className="task relative bg-main rounded-l-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task2 relative bg-main flex items-center justify-center"><img src="/images/tick.svg" alt="tick" className="fullWeekCompletedTick" draggable={false} /> <img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task relative bg-main rounded-r-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div></div>
-            <div className="week5 bg-[#D9D9D9] h-[32px] grid grid-cols-3 rounded-full divide-x divide-white"><div className="task relative bg-main rounded-l-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task2 relative bg-main flex items-center justify-center"><img src="/images/tick.svg" alt="tick" className="fullWeekCompletedTick" draggable={false} /> <img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task relative bg-main rounded-r-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div></div>
-            <div className="week6 bg-[#D9D9D9] h-[32px] grid grid-cols-3 rounded-full divide-x divide-white"><div className="task relative bg-main rounded-l-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task2 relative bg-main flex items-center justify-center"><img src="/images/tick.svg" alt="tick" className="fullWeekCompletedTick" draggable={false} /> <img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task relative bg-main rounded-r-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div></div>
-            <div className="week7 bg-[#D9D9D9] h-[32px] grid grid-cols-3 rounded-full divide-x divide-white"><div className="task relative bg-main rounded-l-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task2 relative bg-main flex items-center justify-center"><img src="/images/tick.svg" alt="tick" className="fullWeekCompletedTick" draggable={false} /> <img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task relative bg-main rounded-r-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div></div>
-            <div className="week8 bg-[#D9D9D9] h-[32px] grid grid-cols-3 rounded-full divide-x divide-white"><div className="task relative bg-main rounded-l-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task2 relative bg-main flex items-center justify-center"><img src="/images/tick.svg" alt="tick" className="fullWeekCompletedTick" draggable={false} /> <img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div><div className="task relative bg-main rounded-r-full"><img src="/images/triangle.svg" alt="triangle" className="currentTaskTriangle absolute -top-[40px] left-1/2 -translate-x-1/2" draggable={false}/></div></div>
-          </div>  */}
-
-          <TaskTracker/>
+          <TaskTracker completedTasks={completedTasks} totalTasks={totalTasks}/>
 
           <div className="grid grid-cols-1 xl:grid-cols-[1fr,300px] gap-5 w-full">
-           <div className="bg-[#F8F8F8] border border-[#8C8C8C] rounded-xl flex items-center sm:justify-center xl:justify-between gap-10 xl:gap-5 flex-col sm:flex-row h-full p-5">
-            <div className="flex items-center sm:items-start justify-between gap-5 sm:gap-0 flex-col h-full">
-              <div><div className="text-[#1B3252] text-center sm:text-left">Tasks Completed:</div><div className="text-main text-[35px] font-[600] text-center mx-auto mt-2">9</div></div>
-              <div><div className="text-[#1B3252] text-center sm:text-left">Tasks Pending:</div><div className="text-[#8C8C8C] text-[35px] font-[600] text-center mx-auto mt-2">4</div>
-            </div></div>
-            <div>
-              <img src="/images/chart2.svg" alt="chart" className="sm:-mr-8 -my-5" />
-            </div>
-           </div>
-           <div className="bg-[#F8F8F8] border border-[#8C8C8C] rounded-xl flex items-center justify-center gap-5 flex-col p-5">
-            <div className="text-main-dark text-[80px] font-[600] border border-[#8C8C8C] rounded-xl leading-none px-5 py-5">4</div>
-            <div className="text-main-dark text-[20px] text-center">More Weeks to Go!</div>
-           </div>
+      <div className="bg-[#F8F8F8] border border-[#8C8C8C] rounded-xl flex items-center sm:justify-center xl:justify-between gap-10 xl:gap-5 flex-col sm:flex-row h-full p-5">
+        <div className="flex items-center sm:items-start justify-between gap-5 sm:gap-0 flex-col h-full">
+          <div>
+            <div className="text-[#1B3252] text-center sm:text-left">Tasks Completed:</div>
+            <div className="text-main text-[35px] font-[600] text-center mx-auto mt-2">{completedTasks}</div>
           </div>
+          <div>
+            <div className="text-[#1B3252] text-center sm:text-left">Tasks Pending:</div>
+            <div className="text-[#8C8C8C] text-[35px] font-[600] text-center mx-auto mt-2">{pendingTasks}</div>
+          </div>
+        </div>
+        <div>
+          <img src="/images/chart2.svg" alt="chart" className="sm:-mr-8 -my-5" />
+        </div>
+      </div>
+      <div className="bg-[#F8F8F8] border border-[#8C8C8C] rounded-xl flex items-center justify-center gap-5 flex-col p-5">
+        <div className="text-main-dark text-[80px] font-[600] border border-[#8C8C8C] rounded-xl leading-none px-5 py-5">
+          {weeksLeft}
+        </div>
+        <div className="text-main-dark text-[20px] text-center">
+          {weeksLeft > 0 ? `More ${weeksLeft} Week${weeksLeft === 1 ? '' : 's'} to Go!` : 'All tasks completed!'}
+        </div>
+      </div>
+    </div>
+
          </div>
         </div>
         :

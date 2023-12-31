@@ -1,15 +1,5 @@
-import React, { useState, useEffect } from 'react';
 
-const TaskTracker = () => {
-  const [completedTasks, setCompletedTasks] = useState(0);
-  const [currentTask, setCurrentTask] = useState(0);
-
-  const totalTasks = 24; // Set the total number of tasks
-
-  useEffect(() => {
-    // Update currentTask based on completedTasks
-    setCurrentTask(Math.min(completedTasks - 1, totalTasks - 1));
-  }, [completedTasks, totalTasks]);
+const TaskTracker = ({completedTasks, totalTasks}) => {
 
   const renderWeeks = () => {
     const weeks = [];
@@ -20,24 +10,23 @@ const TaskTracker = () => {
       for (let j = 0; j < 3; j++) {
         const taskIndex = i * 3 + j;
         const isTaskCompleted = taskIndex < completedTasks;
-        const isCurrentTask = taskIndex === currentTask;
 
         tasks.push(
           <div
             key={j}
             className={`relative flex items-center justify-center
             ${
-                taskIndex % 3 === 0 ?
-                "rounded-l-full" :
-                taskIndex % 3 === 2 ?
-                "rounded-r-full" :
-                ""
+              taskIndex % 3 === 0 ?
+              "rounded-l-full" :
+              taskIndex % 3 === 2 ?
+              "rounded-r-full" :
+              ""
             }
              ${
               isTaskCompleted ? `bg-main` : 'bg-[#D9D9D9]'
             }`}
           >
-            {isCurrentTask && (
+            {taskIndex === completedTasks - 1 && completedTasks < totalTasks && (
               <img
                 src="/images/triangle.svg"
                 alt="triangle"
