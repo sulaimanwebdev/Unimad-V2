@@ -25,15 +25,23 @@ const TaskTracker = () => {
         tasks.push(
           <div
             key={j}
-            className={`relative flex items-center justify-center ${
-              isTaskCompleted ? 'bg-main' : 'bg-[#D9D9D9]'
+            className={`relative flex items-center justify-center
+            ${
+                taskIndex % 3 === 0 ?
+                "rounded-l-full" :
+                taskIndex % 3 === 2 ?
+                "rounded-r-full" :
+                ""
+            }
+             ${
+              isTaskCompleted ? `bg-main` : 'bg-[#D9D9D9]'
             }`}
           >
             {isCurrentTask && (
               <img
                 src="/images/triangle.svg"
                 alt="triangle"
-                className="currentTaskTriangle absolute -top-6 left-1/2 transform -translate-x-1/2"
+                className="currentTaskTriangle absolute -top-[37px] left-1/2 transform -translate-x-1/2"
                 draggable={false}
               />
             )}
@@ -46,7 +54,7 @@ const TaskTracker = () => {
           <div
             key={1}
             className={`relative flex items-center justify-center ${
-              completedTasks >= (i + 1) * 3 ? 'bg-main' : 'bg-[#D9D9D9]'
+              completedTasks >= (i + 1) * 3 ? `bg-main task-${(i + 1) * 3}` : 'bg-[#D9D9D9]'
             }`}
           >
             <img
