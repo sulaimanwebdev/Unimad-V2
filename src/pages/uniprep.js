@@ -2,12 +2,24 @@ import { useState } from "react";
 import Link from "next/link";
 import Task from "../components/Task";
 import ChatBotUniprep from "../components/ChatBotUniprep";
+import Toast from "../components/Toast";
 
 const Uniprep = () => {
 
     const [menu, setMenu] = useState(false);
     const [tab, setTab] = useState("My Plan Progress");
     const [week, setWeek] = useState("Week 4");
+
+    // toast popup logic
+    const [showToast, setShowToast] = useState(false);
+
+    const handleShowToast = () => {
+      setShowToast(true);
+    };
+  
+    const handleHideToast = () => {
+      setShowToast(false);
+    };
 
 
   return (
@@ -154,6 +166,7 @@ const Uniprep = () => {
      </div>
     </div>
 
+    <Toast/>
     </>
   )
 }
