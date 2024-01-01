@@ -2,9 +2,9 @@ import Header from "../components/Header";
 import TestimonialSlider from "../components/TestimonialSlider";
 import Footer from "../components/Footer";
 import ChatBotHome from "@/components/ChatBotHome";
-import { TypeAnimation } from "react-type-animation";
-import Fade from "react-reveal/Fade";
 import StepsAnimation from "@/components/StepsAnimation";
+import Fade from "react-reveal/Fade";
+import Zoom from 'react-reveal/Zoom';
 
 const Home = () => {
 
@@ -91,9 +91,9 @@ const Home = () => {
        <div className="text-[35px] sm3:text-[42px] leading-[117%] mb-6"><span className="text-main font-semibold">8 Steps</span> to land your Dream Job</div>
        <div className="font-normal text-center max-w-[650px] mx-auto">We're here to help students like you with the knowledge, strategies, and resources to crack multiple interviews which eventually lead you to secure a job.</div>
       </Fade>
-      <Fade bottom>
+      <Zoom>
        <img src="/images/steps.svg" alt="steps" className="mx-auto mt-10" />
-      </Fade>
+      </Zoom>
       <Fade bottom>
        <button className="button2 bg-main transition hover:bg-main-dark text-white flex items-center gap-3 text-center font-medium rounded-full w-fit px-6 py-4 mt-10 mx-auto">Start your Journey <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.675 9H0.5V7H12.675L7.075 1.4L8.5 0L16.5 8L8.5 16L7.075 14.6L12.675 9Z" fill="white"/></svg></button>
        </Fade>
