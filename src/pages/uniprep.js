@@ -4,6 +4,7 @@ import Task from "../components/Task";
 import ChatBotUniprep from "../components/ChatBotUniprep";
 import Toast from "../components/Toast";
 import TaskTracker from "@/components/TaskTracker";
+import PieChart from "@/components/PieChart";
 
 const Uniprep = () => {
 
@@ -143,7 +144,8 @@ const Uniprep = () => {
           </div>
         </div>
         <div>
-          <img src="/images/chart2.svg" alt="chart" className="sm:-mr-8 -my-5" />
+          {/* <img src="/images/chart2.svg" alt="chart" className="sm:-mr-8 -my-5" /> */}
+          <PieChart completedTasks={completedTasks}/>
         </div>
       </div>
       <div className="bg-[#F8F8F8] border border-[#8C8C8C] rounded-xl flex items-center justify-center gap-5 flex-col p-5">
