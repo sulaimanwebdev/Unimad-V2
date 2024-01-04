@@ -76,16 +76,16 @@ const ChatBotUniprep = () => {
 
   return (
     <>
-      <div className={`relative flex flex-col pt-[40px] ${textareaHeight > 50 ? "" : "md2:h-[calc(100%-60px)]"}`}>
+      <div className={`relative flex flex-col pt-[40px] h-full`}>
       
        
         <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[22px] text-center font-semibold z-30">Unibot🤖</div>
-        <div className="relative flex-1 z-30">
-          <div ref={chatbotScrollRef} className={`customScroll relative rounded-t-xl md2:max-h-[calc(100vh-100px)] overflow-x-hidden overflow-y-auto pr-2 ${isChatVisible ? "max-h-[350px]" : ""}`}>
+        <div className="relative flex flex-col flex-1 z-30">
+          <div ref={chatbotScrollRef} className={`customScroll min-h-full flex-1 flex flex-col relative rounded-t-xl overflow-x-hidden overflow-y-auto pr-2 ${isChatVisible ? "max-h-[350px]" : ""}`}>
             
             
           {!isChatVisible && (
-        <div className="flex items-center gap-10 flex-col text-center h-full min-h-[calc(80vh+20px)] bg-white rounded-xl p-5">
+        <div className="flex items-center gap-10 flex-col text-center h-full bg-white rounded-xl p-5">
           <div className="flex-1 flex items-center justify-center flex-col gap-3">
            <img src="/images/bot.svg" alt="bot icon" className="mx-auto mb-2" />
            <div className="bg-[#EFF7FF] rounded-lg px-5 py-3">Ask me anything! </div>
@@ -103,7 +103,7 @@ const ChatBotUniprep = () => {
 
 
             {isChatVisible && (
-            <div className="flex flex-col gap-12 justify-end relative bg-white h-full min-h-[350px] md2:min-h-[calc(100vh-100px)] rounded-xl pb-3">
+            <div className="flex flex-col flex-1 bg-white gap-12 justify-end relative rounded-xl pb-3">
               {botMessages.map((message, index) => (
                 <div className="left flex items-start gap-2" key={`bot-${index}`}>
                  <img src="/images/bot.svg" alt="bot" className="w-[40px] translate-y-1" />
@@ -146,35 +146,37 @@ const ChatBotUniprep = () => {
 )}
           </div>
         </div>
+
+        <div className="flex items-end gap-2">
+
+<ChatHistory/>
+<button className="flex items-center justify-center gap-2 bg-white border border-[#0000001A] overflow-hidden rounded-xl h-[50px] -translate-y-2 px-3 sm:px-4"><svg className="min-w-[15px] min-h-[15px] sm:min-w-[18px] sm:min-h-[18px]" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.25 9.75H0V8.25H8.25V0H9.75V8.25H18V9.75H9.75V18H8.25V9.75Z" fill="#8C8C8C"/></svg></button>
+
+<div className="w-full bg-white py-2">
+<div className={`flex items-end gap-2 bg-white border border-[#0000001A] overflow-hidden min-h-[50px] max-h-[400px] pl-5 rounded-xl`}>
+  <textarea
+    placeholder="Ask me anything"
+    value={inputValue}
+    onChange={handleInputChange}
+    ref={textareaRef}
+    className={`customScroll border-none outline-none resize-none w-full h-full py-3 pr-2 ${inputValue === "" ? "overflow-hidden whitespace-nowrap" : ""}`}
+    style={{
+      height: `${textareaHeight}px`,
+      overflow: textareaHeight < 200 ? 'hidden' : 'scroll',
+    }}
+  ></textarea>
+  <button className="-translate-y-4 pl-3 pr-5" onClick={sendMessage}>
+    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 16.0868V10.0868L8 8.08679L0 6.08679V0.086792L19 8.08679L0 16.0868Z" fill="#4C8AE1" />
+    </svg>
+  </button>
+</div>
+</div>
+
+</div>
       </div>
 
-      <div className="flex items-end gap-2">
 
-        <ChatHistory/>
-        <button className="flex items-center justify-center gap-2 bg-white border border-[#0000001A] overflow-hidden rounded-xl h-[50px] -translate-y-2 px-3 sm:px-4"><svg className="min-w-[15px] min-h-[15px] sm:min-w-[18px] sm:min-h-[18px]" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.25 9.75H0V8.25H8.25V0H9.75V8.25H18V9.75H9.75V18H8.25V9.75Z" fill="#8C8C8C"/></svg></button>
-
-        <div className="w-full bg-white py-2">
-        <div className={`flex items-end gap-2 bg-white border border-[#0000001A] overflow-hidden min-h-[50px] max-h-[400px] pl-5 rounded-xl`}>
-          <textarea
-            placeholder="Ask me anything"
-            value={inputValue}
-            onChange={handleInputChange}
-            ref={textareaRef}
-            className="customScroll border-none outline-none resize-none truncate w-full h-full py-3 pr-2"
-            style={{
-              height: `${textareaHeight}px`,
-              overflow: textareaHeight < 200 ? 'hidden' : 'scroll',
-            }}
-          ></textarea>
-          <button className="-translate-y-4 pl-3 pr-5" onClick={sendMessage}>
-            <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 16.0868V10.0868L8 8.08679L0 6.08679V0.086792L19 8.08679L0 16.0868Z" fill="#4C8AE1" />
-            </svg>
-          </button>
-        </div>
-      </div>
-  
-      </div>
     </>
   );
 };

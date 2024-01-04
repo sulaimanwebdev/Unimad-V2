@@ -44,9 +44,29 @@ const Task = (props) => {
             <div className="mb-5"><b>Act 1- The Inner Desire</b></div>
             <div className="mb-5">All mad stories begin with understanding what you want and why you want it. Ask yourself which kind of role you want to pursue and also why do you want to pursue it? Reflect on your academic strengths, projects you've enjoyed, subjects that excite you, and tosks you excel at. Note down all your key skillsets, & competencies. It's essential to understand what hypes you up, as this intrinsic motivation will be key to landing interviews.</div>
             
+
+            <div className="mb-10">
+            <div className="mb-2">Fill in your core skills & competencies 👇</div>
+             <input type="text" placeholder="Task" className="flex w-[250px] border border-[#0000004D] rounded-md outline-main px-3 py-2" />
+             <button className="flex bg-main-dark text-white font-[600] rounded-full mt-3 px-5 py-2">Submit</button>
+            </div>
+
+            <div className="mb-5">You have completed Act 1 — Proceed to the next act.</div>
+
+
             <div className="mb-5"><b>Act 2-Your Destined Roles</b></div>
             <div className="mb-5">Now uncover the roles that resonate with your core. Utilize resources like Linkedin, Glassdoor, and Indeed to explore job descriptions. Pay attention to roles that frequently appear and those that match your skill set. Attend career fairs and networking events at your university to leam about different positions firsthand.</div>
            
+
+            <div className="mb-10">
+            <div className="mb-2">Fill in your core skills & competencies 👇</div>
+             <input type="text" placeholder="Task" className="flex w-[250px] border border-[#0000004D] rounded-md outline-main px-3 py-2" />
+             <button className="flex bg-main-dark text-white font-[600] rounded-full mt-3 px-5 py-2">Submit</button>
+            </div>
+
+            <div className="mb-5">You have completed Act 2 — Proceed to the next act.</div>
+
+
             <div className="mb-5"><b>Act 3-Your Professional Triad</b></div>
             <div className="mb-7">From a pyramid of possibilities, emerge your chosen 3 roles that align closely with your strengths and interests. These roles should represent a mix of your passions, skills, market demand, and personals</div>
 
@@ -58,7 +78,7 @@ const Task = (props) => {
              <button className="flex bg-main-dark text-white font-[600] rounded-full mt-3 px-5 py-2">Submit</button>
             </div>
 
-            <div className="mb-5">You have completed Act 1 — Proceed to the next act.</div>
+            <div className="mb-5">You have completed Act 3 — Proceed to the next act.</div>
 
 
             </div>

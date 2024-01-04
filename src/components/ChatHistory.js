@@ -1,10 +1,20 @@
-import { Fragment, useRef } from 'react';
-import { Menu, Transition } from '@headlessui/react';
+import { Fragment, useRef, useState } from 'react';
+import { Menu, Dialog, Transition } from '@headlessui/react';
 
 export default function ChatHistory() {
+  let [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef();
 
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
   return (
+    <>
     <Menu
       as="div"
       className="relative inline-block text-left -translate-y-2 z-[50]"
@@ -43,22 +53,96 @@ export default function ChatHistory() {
           <div className="flex gap-2 flex-col">
            <div className="flex items-center justify-between gap-1 rounded-lg hover:bg-[#4C8AE133]">
             <button className="overflow-hidden text-left overflow-ellipsis whitespace-nowrap w-full pl-2 py-2">This question will go out of the ordinary and into the realm of unpredictability.</button>
-            <button className="py-2 px-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.3077 20.5C6.80898 20.5 6.38302 20.3234 6.02982 19.9701C5.67661 19.6169 5.5 19.191 5.5 18.6923V5.99999H4.5V4.50002H8.99997V3.61542H15V4.50002H19.5V5.99999H18.5V18.6923C18.5 19.1974 18.325 19.625 17.975 19.975C17.625 20.325 17.1974 20.5 16.6922 20.5H7.3077ZM17 5.99999H6.99997V18.6923C6.99997 18.782 7.02883 18.8557 7.08652 18.9134C7.14423 18.9711 7.21795 19 7.3077 19H16.6922C16.7692 19 16.8397 18.9679 16.9038 18.9038C16.9679 18.8397 17 18.7692 17 18.6923V5.99999ZM9.40385 17H10.9038V7.99999H9.40385V17ZM13.0961 17H14.5961V7.99999H13.0961V17Z" fill="#1B3252"/></svg></button>
+            <Menu.Item>
+             <button onClick={openModal} className="py-2 px-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.3077 20.5C6.80898 20.5 6.38302 20.3234 6.02982 19.9701C5.67661 19.6169 5.5 19.191 5.5 18.6923V5.99999H4.5V4.50002H8.99997V3.61542H15V4.50002H19.5V5.99999H18.5V18.6923C18.5 19.1974 18.325 19.625 17.975 19.975C17.625 20.325 17.1974 20.5 16.6922 20.5H7.3077ZM17 5.99999H6.99997V18.6923C6.99997 18.782 7.02883 18.8557 7.08652 18.9134C7.14423 18.9711 7.21795 19 7.3077 19H16.6922C16.7692 19 16.8397 18.9679 16.9038 18.9038C16.9679 18.8397 17 18.7692 17 18.6923V5.99999ZM9.40385 17H10.9038V7.99999H9.40385V17ZM13.0961 17H14.5961V7.99999H13.0961V17Z" fill="#1B3252"/></svg></button> 
+            </Menu.Item>
            </div>  
 
            <div className="flex items-center justify-between gap-1 rounded-lg hover:bg-[#4C8AE133]">
             <button className="overflow-hidden text-left overflow-ellipsis whitespace-nowrap w-full pl-2 py-2">This question will go out of the ordinary and into the realm of unpredictability.</button>
-            <button className="py-2 px-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.3077 20.5C6.80898 20.5 6.38302 20.3234 6.02982 19.9701C5.67661 19.6169 5.5 19.191 5.5 18.6923V5.99999H4.5V4.50002H8.99997V3.61542H15V4.50002H19.5V5.99999H18.5V18.6923C18.5 19.1974 18.325 19.625 17.975 19.975C17.625 20.325 17.1974 20.5 16.6922 20.5H7.3077ZM17 5.99999H6.99997V18.6923C6.99997 18.782 7.02883 18.8557 7.08652 18.9134C7.14423 18.9711 7.21795 19 7.3077 19H16.6922C16.7692 19 16.8397 18.9679 16.9038 18.9038C16.9679 18.8397 17 18.7692 17 18.6923V5.99999ZM9.40385 17H10.9038V7.99999H9.40385V17ZM13.0961 17H14.5961V7.99999H13.0961V17Z" fill="#1B3252"/></svg></button>
+            <Menu.Item>
+             <button onClick={openModal} className="py-2 px-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.3077 20.5C6.80898 20.5 6.38302 20.3234 6.02982 19.9701C5.67661 19.6169 5.5 19.191 5.5 18.6923V5.99999H4.5V4.50002H8.99997V3.61542H15V4.50002H19.5V5.99999H18.5V18.6923C18.5 19.1974 18.325 19.625 17.975 19.975C17.625 20.325 17.1974 20.5 16.6922 20.5H7.3077ZM17 5.99999H6.99997V18.6923C6.99997 18.782 7.02883 18.8557 7.08652 18.9134C7.14423 18.9711 7.21795 19 7.3077 19H16.6922C16.7692 19 16.8397 18.9679 16.9038 18.9038C16.9679 18.8397 17 18.7692 17 18.6923V5.99999ZM9.40385 17H10.9038V7.99999H9.40385V17ZM13.0961 17H14.5961V7.99999H13.0961V17Z" fill="#1B3252"/></svg></button> 
+            </Menu.Item>
            </div>  
 
            <div className="flex items-center justify-between gap-1 rounded-lg hover:bg-[#4C8AE133]">
             <button className="overflow-hidden text-left overflow-ellipsis whitespace-nowrap w-full pl-2 py-2">This question will go out of the ordinary and into the realm of unpredictability.</button>
-            <button className="py-2 px-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.3077 20.5C6.80898 20.5 6.38302 20.3234 6.02982 19.9701C5.67661 19.6169 5.5 19.191 5.5 18.6923V5.99999H4.5V4.50002H8.99997V3.61542H15V4.50002H19.5V5.99999H18.5V18.6923C18.5 19.1974 18.325 19.625 17.975 19.975C17.625 20.325 17.1974 20.5 16.6922 20.5H7.3077ZM17 5.99999H6.99997V18.6923C6.99997 18.782 7.02883 18.8557 7.08652 18.9134C7.14423 18.9711 7.21795 19 7.3077 19H16.6922C16.7692 19 16.8397 18.9679 16.9038 18.9038C16.9679 18.8397 17 18.7692 17 18.6923V5.99999ZM9.40385 17H10.9038V7.99999H9.40385V17ZM13.0961 17H14.5961V7.99999H13.0961V17Z" fill="#1B3252"/></svg></button>
+            <Menu.Item>
+             <button onClick={openModal} className="py-2 px-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.3077 20.5C6.80898 20.5 6.38302 20.3234 6.02982 19.9701C5.67661 19.6169 5.5 19.191 5.5 18.6923V5.99999H4.5V4.50002H8.99997V3.61542H15V4.50002H19.5V5.99999H18.5V18.6923C18.5 19.1974 18.325 19.625 17.975 19.975C17.625 20.325 17.1974 20.5 16.6922 20.5H7.3077ZM17 5.99999H6.99997V18.6923C6.99997 18.782 7.02883 18.8557 7.08652 18.9134C7.14423 18.9711 7.21795 19 7.3077 19H16.6922C16.7692 19 16.8397 18.9679 16.9038 18.9038C16.9679 18.8397 17 18.7692 17 18.6923V5.99999ZM9.40385 17H10.9038V7.99999H9.40385V17ZM13.0961 17H14.5961V7.99999H13.0961V17Z" fill="#1B3252"/></svg></button> 
+            </Menu.Item>
            </div>   
           </div> 
           
         </Menu.Items>
       </Transition>
     </Menu>
+
+
+
+
+
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-[9999]" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Title
+                    as="h3"
+                    className="text-lg font-medium leading-6 text-gray-900"
+                  >
+                    Warning!
+                  </Dialog.Title>
+                  <div className="mt-2">
+                    <p className="text-sm text-gray-500">
+                     Are you sure you want to delete the chat?
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-3 mt-4">
+                    <button
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-main px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={closeModal}
+                    >
+                      Yes, delete it
+                    </button>
+
+                    <button
+                      type="button"
+                      className="inline-flex justify-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      onClick={closeModal}
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+      
+    </>
   );
 }
