@@ -85,9 +85,9 @@ const ChatBotHome = () => {
   };
 
   return (
-    <div className={`relative bg-[#F3F3F3] border-[10px] border-white rounded-3xl order-2 md2:order-none md2:col-start-1 w-full p-2 ${isChatVisible && "visible"}`}>
+    <div className={`relative bg-[#F3F3F3] border-[10px] border-white rounded-[40px] md:rounded-[64px] order-2 md2:order-none md2:col-start-1 w-full p-2 ${isChatVisible && "visible"}`}>
       {!isChatVisible && (
-        <div className="flex items-center justify-end gap-24 flex-col text-center min-h-[450px] bg-[#F3F3F3] rounded-xl p-5">
+        <div className="flex items-center justify-end gap-24 lg:gap-[120px] flex-col text-center min-h-[450px] lg:min-h-[500px] bg-[#F3F3F3] rounded-[40px] md:rounded-[64px] p-5">
           <div>
            <img src="/images/bot.svg" alt="bot icon" className="mx-auto mb-2" />
            <div className="text-[25px]">“Go ahead, ask me for job hunt queries”</div>
@@ -105,7 +105,7 @@ const ChatBotHome = () => {
 
       {isChatVisible && (
         <>
-          <div ref={chatbotScrollRef} className={`customScroll relative bg-[#F3F3F3] rounded-xl h-[450px]  overflow-x-hidden overflow-y-auto px-3 py-3`}>
+          <div ref={chatbotScrollRef} className={`customScroll relative bg-[#F3F3F3] rounded-[40px] md:rounded-[64px] h-[450px] overflow-x-hidden overflow-y-auto px-3 py-3`}>
             <div className="flex flex-col justify-end min-h-[450px] gap-12">
             
             {botMessages.map((message, index) => (
@@ -163,7 +163,7 @@ const ChatBotHome = () => {
           </div>
           </>
       )}
-          <div className={`flex items-end gap-2 bg-white overflow-hidden min-h-[50px] max-h-[400px] pl-5 ${textareaHeight < 70 ? "rounded-full" : "rounded-lg"}`}>
+          <div className={`flex items-end gap-2 bg-white overflow-hidden w-full max-w-[690px] min-h-[50px] max-h-[400px] mx-auto pl-5 ${textareaHeight < 70 ? "rounded-full" : "rounded-lg"}`}>
             <textarea
               placeholder="Ask me anything"
               value={inputValue}
@@ -185,7 +185,7 @@ const ChatBotHome = () => {
        
        
        {blurChat && 
-       <div className="absolute top-0 left-0 flex items-center justify-center gap-7 flex-col w-full h-full p-5" style={{backdropFilter: "blur(8px)"}}>
+       <div className="absolute top-0 left-0 flex items-center justify-center rounded-[40px] lg:rounded-[64px] gap-7 flex-col w-full h-full p-5" style={{backdropFilter: "blur(8px)"}}>
         <div className="text-[35px] sm3:text-[42px] text-center"><span className="text-main font-semibold">Sign in</span> for more prompts</div>
         <button className="button2 bg-main transition hover:bg-main-dark text-white flex items-center gap-3 text-center font-medium rounded-full w-fit mx-auto px-6 py-4">Take me in <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.675 9H0.5V7H12.675L7.075 1.4L8.5 0L16.5 8L8.5 16L7.075 14.6L12.675 9Z" fill="white"/></svg></button>
        </div>
