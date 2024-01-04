@@ -144,7 +144,6 @@ const Uniprep = () => {
           </div>
         </div>
         <div>
-          {/* <img src="/images/chart2.svg" alt="chart" className="sm:-mr-8 -my-5" /> */}
           <PieChart completedTasks={completedTasks}/>
         </div>
       </div>
