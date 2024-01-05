@@ -21,7 +21,6 @@ const Task = (props) => {
     }
 };
 
-
   return (
     <>
      <div className={`relative bg-[#F8F8F8] border-[0.25px] border-[#8C8C8C] rounded-xl overflow-hidden transition-[height] p-5 pb-14 ${task === true ? "h-[670px]" : "h-[210px]"}`}>
@@ -47,7 +46,7 @@ const Task = (props) => {
 
             <div className="mb-10">
             <div className="mb-2">Fill in your core skills & competencies 👇</div>
-             <input type="text" placeholder="Task" className="flex w-[250px] border border-[#0000004D] rounded-md outline-main px-3 py-2" />
+             <textarea placeholder="Task" className="customScroll flex w-[250px] border border-[#0000004D] rounded-md outline-main resize-none h-[100px] px-3 py-2"></textarea>
              <button className="flex bg-main-dark text-white font-[600] rounded-full mt-3 px-5 py-2">Submit</button>
             </div>
 
@@ -60,7 +59,7 @@ const Task = (props) => {
 
             <div className="mb-10">
             <div className="mb-2">Fill in your core skills & competencies 👇</div>
-             <input type="text" placeholder="Task" className="flex w-[250px] border border-[#0000004D] rounded-md outline-main px-3 py-2" />
+             <textarea placeholder="Task" className="customScroll flex w-[250px] border border-[#0000004D] rounded-md outline-main resize-none h-[100px] px-3 py-2"></textarea>
              <button className="flex bg-main-dark text-white font-[600] rounded-full mt-3 px-5 py-2">Submit</button>
             </div>
 
@@ -74,7 +73,7 @@ const Task = (props) => {
 
             <div className="mb-10">
             <div className="mb-2">Fill in your core skills & competencies 👇</div>
-             <input type="text" placeholder="Task" className="flex w-[250px] border border-[#0000004D] rounded-md outline-main px-3 py-2" />
+             <textarea placeholder="Task" className="customScroll flex w-[250px] border border-[#0000004D] rounded-md outline-main resize-none h-[100px] px-3 py-2"></textarea>
              <button className="flex bg-main-dark text-white font-[600] rounded-full mt-3 px-5 py-2">Submit</button>
             </div>
 
